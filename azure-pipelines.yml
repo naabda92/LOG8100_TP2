@@ -19,3 +19,20 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+
+# Step 3: Run OWASP ZAP in Docker and scan the app
+- script: |
+    docker run -u zap \
+      -v $(Build.ArtifactStagingDirectory):/zap/wrk:rw \
+      --network="host" \
+      owasp/zap2docker-stable zap-baseline.py \
+      -t http://myappurl.com \
+      -r zap_report.html
+  displayName: 'Run ZAP scan'
+  
+# Step 4: Publish the ZAP scan report
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)/zap_report.html'
+    artifactName: 'ZAP Scan Report'
+  displayName: 'Publish ZAP Report'
