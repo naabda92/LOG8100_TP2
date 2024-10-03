@@ -1,9 +1,9 @@
-version: '3.8'
-
 services:
 
   dvna:
-    image: ./  # Use the official DVNA image
+    build:
+      context: ./
+      dockerfile: Dockerfile  # Building my own app image
     ports:
       - "9090:9090"  # Expose DVNA on port 9090
     depends_on:
@@ -19,13 +19,12 @@ services:
           memory: 4G                   # Limit to 4 GB of RAM
 
   postgres:
-    image: postgres:latest
+    image: postgres:16
     container_name: dvna_db
     networks:
       - dvna-network
     volumes:
       - db_data:/var/lib/postgresql/data
-      - db_backup:/backup
     env_file:
       - ./vars.env  # Use this env file for the database
     deploy:
