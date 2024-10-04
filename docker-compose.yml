@@ -1,5 +1,6 @@
-services:
 
+version: "2.1"
+services:
   dvna:
     build:
       context: ./
@@ -7,38 +8,25 @@ services:
     ports:
       - "9090:9090"  # Expose DVNA on port 9090
     depends_on:
-      - postgres
+      - db
     networks:
-      - dvna-network
+      - dvnaNetwork
     env_file:
       - ./vars.env
-    deploy:
-      resources:
-        limits:
-          cpus: '2.0'                  # Limit to 1 CPU core
-          memory: 4G                   # Limit to 4 GB of RAM
 
-  postgres:
-    image: postgres:16
+  db:
+    image: postgres:13
     container_name: dvna_db
     networks:
-      - dvna-network
+      - dvnaNetwork
     volumes:
       - db_data:/var/lib/postgresql/data
     env_file:
       - ./vars.env  # Use this env file for the database
-    deploy:
-      resources:
-        limits:
-          cpus: '1'         # Limit to 0.5 CPU core
-          memory: 2G           # Limit to 1 GB of RAM
 
 networks:
-  dvna-network:
+  dvnaNetwork:
     driver: bridge
 
 volumes:
   db_data:
-    driver: local
-  db_backup:
-    driver: local
