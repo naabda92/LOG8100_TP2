@@ -37,7 +37,11 @@ app.use(require('express-flash')());
 app.use('/app',require('./routes/app')())
 app.use('/',require('./routes/main')(passport))
 
+// Delay the server start by 5 seconds (5000 milliseconds)
+const delay = 15000;
+
 // Start Server
- app.listen(9090, () => {
-   console.log('Server is running on http://localhost:3000');
- });
+ setTimeout(() => {
+  app.listen(9090, () => {
+    console.log('Server is running on http://localhost:9090 after a delay');
+  })});
