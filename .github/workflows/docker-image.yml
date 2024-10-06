@@ -26,7 +26,7 @@ jobs:
       # Step 4: Build Docker images using Docker Compose
       - name: Build Docker images with Docker Compose
         run: |
-          docker-compose -f docker-compose.yml build
+          docker compose -f docker-compose.yml build
       # docker-compose -f docker-compose.yml push
           
         env:
