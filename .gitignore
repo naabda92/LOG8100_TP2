@@ -4,3 +4,8 @@ npm-debug.log
 vars.env
 package-lock.json
 .dev/
+docker-compose-Local-ZAP.yml
+docker-compose-Local.yml
+/zap-reports
+# Ignore .env file
+.env
