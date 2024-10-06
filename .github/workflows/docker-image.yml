@@ -13,8 +13,8 @@ jobs:
         uses: actions/checkout@v4
 
       # Step 2: Set up Docker Buildx
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+      # - name: Set up Docker Buildx
+      #   uses: docker/setup-buildx-action@v2
 
       # Step 3: Log in to Docker Hub
       - name: Log in to Docker Hub
@@ -27,7 +27,7 @@ jobs:
       - name: Build Docker images with Docker Compose
         run: |
           docker-compose -f docker-compose.yml build
-          docker-compose -f docker-compose.yml push
+      # docker-compose -f docker-compose.yml push
           
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
