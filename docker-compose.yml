@@ -11,8 +11,13 @@ services:
       - db
     networks:
       - dvnaNetwork
-    env_file:
-      - ./vars.env
+    environment:
+      - DATABASE_URL=${{ secrets.DATABASE_URL }}
+      - POSTGRES_USER=${{ secrets.POSTGRES_USER }}
+      - POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}
+      - POSTGRES_DB=${{ secrets.POSTGRES_DB }}
+      - POSTGRES_HOST=${{ secrets.POSTGRES_HOST }}
+      - POSTGRES_PORT=${{ secrets.POSTGRES_PORT }}
 
   db:
     image: postgres:13
@@ -21,8 +26,10 @@ services:
       - dvnaNetwork
     volumes:
       - db_data:/var/lib/postgresql/data
-    env_file:
-      - ./vars.env  # Use this env file for the database
+    environment:
+      - POSTGRES_USER=${{ secrets.POSTGRES_USER }}
+      - POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}
+      - POSTGRES_DB=${{ secrets.POSTGRES_DB }}
 
 networks:
   dvnaNetwork:
