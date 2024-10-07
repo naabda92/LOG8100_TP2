@@ -10,15 +10,18 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    open-pull-requests-limit: 10 # Increase the limit to 10 pull requests
 
   # Check for updates to npm dependencies
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
+    open-pull-requests-limit: 10 # Increase the limit to 10 pull requests
 
   # Check for updates to Docker dependencies
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
       interval: "daily"
+    open-pull-requests-limit: 10 # Increase the limit to 10 pull requests
