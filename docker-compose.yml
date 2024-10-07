@@ -5,7 +5,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile  # Building my own app image
-    image: yourusername/log8100_tp2:latest  # Set the image name and tag
+    image: naabda92/log8100_tp2:latest  # Set the image name and tag
     ports:
       - "9090:9090"  # Expose DVNA on port 9090
     depends_on:
