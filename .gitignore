@@ -9,3 +9,5 @@ docker-compose-Local.yml
 /zap-reports
 # Ignore .env file
 .env
+docker login.docx
+~$cker login.docx
