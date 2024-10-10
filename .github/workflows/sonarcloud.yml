@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Analyze with SonarCloud
@@ -54,7 +54,7 @@ jobs:
           args:
             # Unique keys of your project and organization. You can find them in SonarCloud > Information (bottom-left menu)
             # mandatory
-            -Dsonar.projectKey=naabda92_juice-shop
+            -Dsonar.projectKey=naabda92_LOG8100_TP2
             -Dsonar.organization=naabda92
             #-Dsonar.sources=.
             #-Dsonar.scm.provider=git
