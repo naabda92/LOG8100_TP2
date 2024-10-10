@@ -1,4 +1,4 @@
-name: "ZAP Baseline Scan"
+name: "CI/CD pipeline"
 
 on:
   workflow_dispatch:
