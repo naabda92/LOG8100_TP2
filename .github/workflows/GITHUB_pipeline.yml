@@ -108,7 +108,6 @@ jobs:
   zap_scan:
     runs-on: ubuntu-latest
     name: Zap scanning
-    needs: sonarCloud_scan  # This job will run only after the 'build' job completes
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v4
@@ -118,22 +117,4 @@ jobs:
         with:
           token: ${{ secrets.GIT_TOKEN }}
           target: 'http://log8100-tp210.eastus.azurecontainer.io:9090/'
-          cmd_options: '-o zap_report.html -j zap_report.json'
-          
-      - name: Check if report files exist
-        run: |
-         ls -l  # This will list files in the current directory
-
-  # Upload the ZAP report as an artifact
-      - name: Upload ZAP report
-        uses: actions/upload-artifact@v4
-        with:
-          name: zap-report
-          path: zap_report.html  # Specify the path of the ZAP report file
-         
-    # Upload the ZAP JSON report as an artifact
-      - name: Upload ZAP JSON report
-        uses: actions/upload-artifact@v4
-        with:
-          name: zap-report-json
-          path: zap_report.json  # Specify the path of the ZAP JSON report file
+          cmd_options: '-a -j'
