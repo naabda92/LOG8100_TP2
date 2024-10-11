@@ -118,9 +118,7 @@ jobs:
         with:
           token: ${{ secrets.GIT_TOKEN }}
           target: 'http://log8100-tp210.eastus.azurecontainer.io:9090/'
-          cmd_options: '-a -j'
-          report: 'zap_report.html'  # Specify the report output
-          json_report: 'zap_report.json'  # Specify the JSON report output (if supported)
+          cmd_options: '-o zap_report.html -j zap_report.json'
           
       - name: Check if report files exist
        run: |
