@@ -20,9 +20,6 @@ ENV PATH="$NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH"
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
-# Copy package.json and package-lock.json to the working directory
-COPY vars*.env ./
-
 # Copy the rest of the application files into the working directory
 COPY . .
 
