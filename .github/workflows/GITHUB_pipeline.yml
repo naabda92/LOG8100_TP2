@@ -39,7 +39,7 @@ jobs:
           
   sonarCloud_scan:
     runs-on: ubuntu-latest
-
+    needs: build  # This job will run only after the 'build' job completes
     steps:
       - uses: actions/checkout@v4
         with:
@@ -107,7 +107,8 @@ jobs:
         
   zap_scan:
     runs-on: ubuntu-latest
-    name: Scan Juice Shop preview instance on Heroku
+    name: Zap scanning
+    needs: sonarCloud_scan  # This job will run only after the 'build' job completes
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v4
@@ -115,7 +116,7 @@ jobs:
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.11.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GIT_TOKEN }}
           target: 'http://log8100-tp210.eastus.azurecontainer.io:9090/'
           cmd_options: '-a -j'
           report: 'zap_report.html'  # Specify the report output
