@@ -121,7 +121,7 @@ jobs:
           cmd_options: '-o zap_report.html -j zap_report.json'
           
       - name: Check if report files exist
-       run: |
+        run: |
          ls -l  # This will list files in the current directory
 
   # Upload the ZAP report as an artifact
