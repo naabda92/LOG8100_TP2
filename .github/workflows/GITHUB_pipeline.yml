@@ -123,7 +123,7 @@ jobs:
           json_report: 'zap_report.json'  # Specify the JSON report output (if supported)
           
       - name: Check if report files exist
-       run: |
+        run: |
          ls -l  # This will list files in the current directory
 
   # Upload the ZAP report as an artifact
