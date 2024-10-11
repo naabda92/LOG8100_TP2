@@ -120,6 +120,11 @@ jobs:
           target: 'http://log8100-tp210.eastus.azurecontainer.io:9090/'
           cmd_options: '-a -j'
           report: 'zap_report.html'  # Specify the report output
+          json_report: 'zap_report.json'  # Specify the JSON report output (if supported)
+          
+      - name: Check if report files exist
+       run: |
+         ls -l  # This will list files in the current directory
 
   # Upload the ZAP report as an artifact
       - name: Upload ZAP report
