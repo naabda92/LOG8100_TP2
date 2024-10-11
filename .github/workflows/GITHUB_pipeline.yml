@@ -70,39 +70,39 @@ jobs:
           # When you need the analysis to take place in a directory other than the one from which it was launched, default is .
           projectBaseDir: .
           
-  deploy:
-    runs-on: ubuntu-latest
+  #-deploy:
+  #-  runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+  #-  steps:
+ #-     - name: Checkout code
+  #-      uses: actions/checkout@v4
 
-      - name: Set up Azure CLI
-        uses: azure/setup-azure-cli@v2
-        with:
-          azure-cli-version: '2.x'
-
-      - name: Login to Azure
-        run: |
-          echo "${{ secrets.AZURE_CLIENT_SECRET }}" | az login --service-principal -u "${{ secrets.AZURE_CLIENT_ID }}" -p - --tenant "${{ secrets.AZURE_TENANT_ID }}"
-
-      - name: Create Azure Resource Group (if not exists)
-        run: |
-          az group create --name "${{ secrets.AZURE_RESOURCE_GROUP }}" --location "Canada Central"
-
-      - name: Create Azure Container Instance
-        run: |
-          az container create \
-            --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
-            --name "${{ secrets.AZURE_CONTAINER_NAME }}" \
-            --image "${{ secrets.DOCKER_IMAGE }}" \
-            --cpu 1 \
-            --memory 1.5 \
-            --ports 80 9090 \
-            --restart-policy OnFailure
-
-      - name: Logout from Azure
-        run: az logout
+#-      - name: Set up Azure CLI
+  #-      uses: azure/setup-azure-cli@v2
+#-        with:
+#-          azure-cli-version: '2.x'
+#-
+#-      - name: Login to Azure
+#-        run: |
+#-          echo "${{ secrets.AZURE_CLIENT_SECRET }}" | az login --service-principal -u "${{ secrets.AZURE_CLIENT_ID }}" -p - --tenant "${{ secrets.AZURE_TENANT_ID }}"
+#-
+#-      - name: Create Azure Resource Group (if not exists)
+#-        run: |
+#-          az group create --name "${{ secrets.AZURE_RESOURCE_GROUP }}" --location "Canada Central"
+#-
+#-      - name: Create Azure Container Instance
+#-        run: |
+#-          az container create \
+#-            --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
+#-            --name "${{ secrets.AZURE_CONTAINER_NAME }}" \
+#-            --image "${{ secrets.DOCKER_IMAGE }}" \
+#-            --cpu 1 \
+#-            --memory 1.5 \
+#-            --ports 80 9090 \
+#-            --restart-policy OnFailure
+#-
+#-      - name: Logout from Azure
+#-        run: az logout
         
         
   zap_scan:
@@ -117,7 +117,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target: 'http://log8100-tp210.eastus.azurecontainer.io:9090/'
-          rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a -j'
           report: 'zap_report.html'  # Specify the report output
 
@@ -127,4 +126,10 @@ jobs:
         with:
           name: zap-report
           path: zap_report.html  # Specify the path of the ZAP report file
-          
+         
+    # Upload the ZAP JSON report as an artifact
+    - name: Upload ZAP JSON report
+      uses: actions/upload-artifact@v4
+      with:
+        name: zap-report-json
+        path: zap_report.json  # Specify the path of the ZAP JSON report file
