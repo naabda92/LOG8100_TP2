@@ -7,7 +7,6 @@ jobs:
   zap_scan:
     runs-on: ubuntu-latest
     name: Zap scanning
-    needs: sonarCloud_scan  # This job will run only after the 'build' job completes
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v4
