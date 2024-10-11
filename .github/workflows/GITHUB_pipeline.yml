@@ -128,8 +128,8 @@ jobs:
           path: zap_report.html  # Specify the path of the ZAP report file
          
     # Upload the ZAP JSON report as an artifact
-    - name: Upload ZAP JSON report
-      uses: actions/upload-artifact@v4
-      with:
-        name: zap-report-json
-        path: zap_report.json  # Specify the path of the ZAP JSON report file
+      - name: Upload ZAP JSON report
+        uses: actions/upload-artifact@v4
+        with:
+          name: zap-report-json
+          path: zap_report.json  # Specify the path of the ZAP JSON report file
