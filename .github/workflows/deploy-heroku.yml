@@ -23,13 +23,9 @@ jobs:
         run: |
           docker pull docker.io/naabda92/log8100_tp2:latest
 
-      - name: Login to Heroku
-        run: |
-          echo "${{ secrets.HEROKU_API_KEY }}" | heroku auth:token
-
       - name: Login to Heroku Container Registry
         run: |
-          heroku container:login
+          echo "${{ secrets.HEROKU_API_KEY }}" | docker login --username=_ --password-stdin registry.heroku.com
 
       - name: Tag and Push Docker image to Heroku
         run: |
@@ -39,7 +35,3 @@ jobs:
       - name: Release the Docker image on Heroku
         run: |
           heroku container:release web --app ${{ secrets.HEROKU_APP_NAME }}
-
-      - name: Run database migrations (if needed)
-        run: |
-          heroku run npm run migrate --app ${{ secrets.HEROKU_APP_NAME }}
