@@ -38,7 +38,7 @@ app.use('/app',require('./routes/app')())
 app.use('/',require('./routes/main')(passport))
 
 // Delay the server start by 5 seconds (5000 milliseconds)
-const delay = 20000;
+const delay = 0;
 
 // Start Server
  setTimeout(() => {
