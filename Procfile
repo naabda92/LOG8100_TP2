@@ -1,1 +1,1 @@
-web: docker run -p 80:9090 registry.heroku.com/log8100-tp2-10/web
+web: npm start
