@@ -9,7 +9,7 @@ var config = require("../config/db.js")
 if (process.env.DATABASE_URL) {
   sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect: "postgres",
-    protocol: "postgres"
+    protocol: "postgres",
     dialectOptions: {
       ssl: {
         require: true,
