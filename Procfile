@@ -1,1 +1,1 @@
-web: docker run -p 80:9090 registry.heroku.com/YOUR_HEROKU_APP_NAME/web
+web: docker run -p 80:9090 registry.heroku.com/log8100-tp2-10/web
