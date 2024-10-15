@@ -42,6 +42,7 @@ const delay = 0;
 
 // Start Server
  setTimeout(() => {
-  app.listen(9090, () => {
+  const PORT = process.env.PORT || 9090; // Use the port from Heroku or fall back to 9090
+  app.listen(PORT, () => {
     console.log('Server is running on http://localhost:9090 after a delay');
   })});
