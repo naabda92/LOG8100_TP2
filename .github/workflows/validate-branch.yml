@@ -1,0 +1,17 @@
+name: Enforce branch restrictions
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ensure PR is from develop branch
+        run: |
+          if [[ "${{ github.head_ref }}" != "develop" ]]; then
+            echo "Error: Pull requests to main must come from develop." >&2
+            exit 1
+          fi
