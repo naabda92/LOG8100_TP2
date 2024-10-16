@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,30 +13,37 @@
             padding: 20px;
             background-color: #f4f4f4;
         }
+
         h1 {
             color: #333;
         }
+
         h2 {
             color: #555;
         }
+
         code {
             background-color: #eee;
             padding: 2px 4px;
             font-size: 1.1em;
         }
+
         pre {
             background-color: #eee;
             padding: 10px;
             border-left: 4px solid #333;
             overflow-x: auto;
         }
+
         a {
             color: #1a73e8;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -45,31 +53,44 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>Random Web APP</h1>
-
-        <p>Welcome to the setup guide for the Random Web APP. You can either use the official Docker image or set up the application manually by following the instructions below.</p>
-
-        <h2>Using Official Docker Image</h2>
-        <p>TODO HERE</p>
-
-        <h2>Manual Setup</h2>
-
-        <h3>Clone the Repository</h3>
-        <pre><code>git clone https://github.com/appsecco/dvna
-cd dvna</code></pre>
-
-        <h3>Install Dependencies</h3>
-        <pre><code>npm install</code></pre>
-
-        <h3>Start the Application</h3>
-        <pre><code>npm start</code></pre>
-
-        <h3>Access the Application</h3>
-        <p>Once the application is running, you can access it in your browser at:</p>
-        <p><a href="http://localhost:9090" target="_blank">http://localhost:9090</a></p>
-
+        <h1 id="tp2-devsecops">TP2 DevSecOps</h1>
+        <p>This project is based on the <a href="https://github.com/appsecco/dvna">DVNA</a> (Damn Vulnerable Node
+            Application) repository, adapted for DevSecOps practices.
+            To run this app you can either use the Docker image or set up the application manually by following the
+            instructions below.</p>
+        <h3 id="using-the-docker-image">Using the Docker Image</h3>
+        <p>To quickly get started, pull and run the official Docker image:</p>
+        <pre><code class="lang-bash">docker pull <span class="hljs-symbol">naabda92</span>/lo<span class="hljs-name">g8100</span>_tp<span class="hljs-number">2</span>
+        </code></pre>
+        <h3 id="manual-setup">Manual Setup</h3>
+        <h4 id="clone-the-repository">Clone the repository</h4>
+        <pre><code class="lang-bash">git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/naabda92/LOG8100_TP2
+        cd LOG8100_TP2
+        </code></pre>
+        <h4 id="create-a-vars-env-file">Create a vars.env File</h4>
+        <p>You&#39;ll need to create a vars.env file for database configuration. Example variables:</p>
+        <pre><code class="lang-bash"><span class="hljs-attr">DATABASE_URL</span>=postgres://dvna:passw0rd@dvna_db:<span class="hljs-number">5432</span>/dvna_db
+        <span class="hljs-attr">POSTGRES_USER</span>=dvna
+        <span class="hljs-attr">POSTGRES_PASSWORD</span>=passw0rd
+        <span class="hljs-attr">POSTGRES_DB</span>=dvna_db
+        <span class="hljs-attr">POSTGRES_HOST</span>=dvna_db
+        <span class="hljs-attr">POSTGRES_PORT</span>=<span class="hljs-number">5432</span>
+        </code></pre>
+        <h4 id="start-the-application-and-database">Start the Application and Database</h4>
+        <p>Use docker-compose to spin up the application along with the database:</p>
+        <pre><code class="lang-bash"><span class="hljs-attribute">docker compose up</span>
+        </code></pre>
+        <h4 id="access-the-application">Access the Application</h4>
+        <p>You can now access the application in your browser at:
+            <a href="http://localhost:9090">http://localhost:9090</a>
+        </p>
+        <p><a href="https://sonarcloud.io/summary/new_code?id=naabda92_LOG8100_TP2"><img
+                    src="https://sonarcloud.io/api/project_badges/quality_gate?project=naabda92_LOG8100_TP2"
+                    alt="Quality gate"></a></p>
     </div>
 </body>
+
 </html>
