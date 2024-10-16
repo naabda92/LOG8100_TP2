@@ -92,7 +92,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: ZAP Scan
-        uses: zaproxy/action-baseline@v0.11.0
+        uses: zaproxy/action-baseline@v0.13.0
         with:
           token: ${{ secrets.GIT_TOKEN }}
           target: 'http://log8100-tp210.eastus.azurecontainer.io:9090/'
