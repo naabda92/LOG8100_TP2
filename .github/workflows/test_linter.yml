@@ -1,4 +1,4 @@
-name: "CI/CD pipeline"
+name: "Super linter"
 
 on:
   workflow_dispatch:
