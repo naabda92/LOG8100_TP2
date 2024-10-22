@@ -10,6 +10,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    target-branch: "develop"  # La branche cible pour les PRs de Dependabot
     open-pull-requests-limit: 10 # Increase the limit to 10 pull requests
 
   # Check for updates to npm dependencies
@@ -17,6 +18,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    target-branch: "develop"  # La branche cible pour les PRs de Dependabot
     open-pull-requests-limit: 10 # Increase the limit to 10 pull requests
 
   # Check for updates to Docker dependencies
@@ -24,4 +26,5 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    target-branch: "develop"  # La branche cible pour les PRs de Dependabot
     open-pull-requests-limit: 10 # Increase the limit to 10 pull requests
