@@ -101,7 +101,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/develop'
     needs: deploy_dev  # This job will run only after the 'build' job completes
-    name: Zap scanning
+    name: Dev - Zap scanning
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v4
@@ -117,7 +117,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     needs: deploy_prod  # This job will run only after the 'build' job completes
-    name: Zap scanning
+    name: Prod - Zap scanning
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v4
