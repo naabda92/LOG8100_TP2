@@ -30,7 +30,7 @@ jobs:
  
   sonarCloud_scan:
     runs-on: ubuntu-latest
-    needs: super_linter  # This job will run only after the 'build' job completes
+
     steps:
       - uses: actions/checkout@v4
         with:
