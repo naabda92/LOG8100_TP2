@@ -13,6 +13,7 @@ jobs:
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.11.0
         with:
+          token: ${{ secrets.GIT_TOKEN }}
           target: 'https://log8100-10-dev-2addd04e4cb7.herokuapp.com'
           cmd_options: '-x report_xml.xml -a'
 
