@@ -25,4 +25,22 @@ jobs:
             report_json.json
             report_md.md
             report_html.html
-            report_xml.xml          
+            report_xml.xml   
+     # Step 4: Copy the ZAP reports to the desired location in the repository
+      - name: Move ZAP Reports to repo
+        run: |
+          mv report_json.json docs/resources/
+          mv report_md.md docs/resources/
+          mv report_html.html docs/resources/
+          mv report_xml.xml docs/resources/
+
+      # Step 5: Commit and push the changes back to the repository
+      - name: Commit ZAP Reports
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add reports/zap/
+          git commit -m "Add ZAP reports"
+          git push origin feature/xmlreport
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }} # GitHub token for authentication
