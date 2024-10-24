@@ -134,7 +134,7 @@ jobs:
         uses: zaproxy/action-baseline@v0.11.0
         with:
           token: ${{ secrets.GIT_TOKEN }}
-          target: 'http://log8100-tp210.eastus.azurecontainer.io:9090/'
+          target: 'https://log8100-10-dev-2addd04e4cb7.herokuapp.com'
           cmd_options: '-a -j'
           
   zap_scan_prod:
@@ -150,5 +150,5 @@ jobs:
         uses: zaproxy/action-baseline@v0.11.0
         with:
           token: ${{ secrets.GIT_TOKEN }}
-          target: 'http://log8100-tp210.eastus.azurecontainer.io:9090/'
+          target: 'https://log8100-10-prod-2addd04e4cb7.herokuapp.com/login'
           cmd_options: '-a -j'
