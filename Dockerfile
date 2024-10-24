@@ -1,5 +1,5 @@
 # Use Node.js as the base image (as DVNA is a Node.js app)
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 LABEL MAINTAINER "Subash SN"
 
 # Set the working directory inside the container
