@@ -45,6 +45,6 @@ jobs:
           git config --global user.email "actions@github.com"
           git add docs/resources/
           git commit -m "Add ZAP reports"
-          git push origin feature/xmlreport
+          git push https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/naabda92/LOG8100_TP2.git feature/xmlreport
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }} # GitHub token for authentication
