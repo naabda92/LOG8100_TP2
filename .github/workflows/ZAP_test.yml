@@ -1,0 +1,20 @@
+name: "Zap testing"
+
+on:
+  workflow_dispatch:
+
+jobs:            
+  zap_scan_dev:
+    runs-on: ubuntu-latest
+    name: Dev - Zap scanning
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+
+      - name: ZAP Scan
+        uses: zaproxy/action-baseline@v0.11.0
+        with:
+          token: ${{ secrets.GIT_TOKEN }}
+          target: 'https://log8100-10-dev-2addd04e4cb7.herokuapp.com'
+          cmd_options: '-a -j -o zap_report.xml -f xml'
+
