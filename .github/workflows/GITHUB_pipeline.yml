@@ -135,7 +135,7 @@ jobs:
         with:
           token: ${{ secrets.GIT_TOKEN }}
           target: 'https://log8100-10-dev-2addd04e4cb7.herokuapp.com'
-          cmd_options: '-a -j'
+          cmd_options: '-a -j -x'
           
   zap_scan_prod:
     runs-on: ubuntu-latest
@@ -151,4 +151,4 @@ jobs:
         with:
           token: ${{ secrets.GIT_TOKEN }}
           target: 'https://log8100-10-prod-2addd04e4cb7.herokuapp.com'
-          cmd_options: '-a -j'
+          cmd_options: '-a -j -x'
