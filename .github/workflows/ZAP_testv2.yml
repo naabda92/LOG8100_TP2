@@ -22,6 +22,8 @@ jobs:
             -r report_html.html \
             -x report_xml.xml \
             -a
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}  # Reference the PAT
             
       - name: Upload ZAP Reports
         uses: actions/upload-artifact@v3
