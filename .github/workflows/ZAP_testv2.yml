@@ -17,10 +17,7 @@ jobs:
         run: |
           docker run --user root -v ${{ github.workspace }}:/zap/wrk/:rw --network=host \
             ghcr.io/zaproxy/zaproxy:latest zap-full-scan.py \
-            -t https://log8100-10-dev-2addd04e4cb7.herokuapp.com \
-            -J /zap/wrk/report_json.json \
-            -r /zap/wrk/report_html.html \
-            -x /zap/wrk/report_xml.xml
+            -t https://log8100-10-dev-2addd04e4cb7.herokuapp.com
             
       - name: Upload ZAP Reports
         uses: actions/upload-artifact@v3
