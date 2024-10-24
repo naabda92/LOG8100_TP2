@@ -18,9 +18,9 @@ jobs:
           docker run --user root -v ${{ github.workspace }}:/zap/wrk/:rw --network=host \
             ghcr.io/zaproxy/zaproxy:latest zap-full-scan.py \
             -t https://log8100-10-dev-2addd04e4cb7.herokuapp.com \
-            -J report_json.json \
-            -r report_html.html \
-            -x report_xml.xml \
+            -J /zap/wrk/report_json.json \
+            -r /zap/wrk/report_html.html \
+            -x /zap/wrk/report_xml.xml \
             -a || (echo "ZAP scan failed" && exit 1)
             
       - name: Upload ZAP Reports
@@ -28,7 +28,7 @@ jobs:
         with:
           name: zap-reports
           path: |
-            report_json.json
-            report_md.md
-            report_html.html
-            report_xml.xml
+            /zap/wrk/report_json.json
+            /zap/wrk/report_md.md
+            /zap/wrk/report_html.html
+            /zap/wrk/report_xml.xml
