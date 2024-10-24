@@ -17,4 +17,12 @@ jobs:
           target: 'https://log8100-10-dev-2addd04e4cb7.herokuapp.com'
           cmd_options: '-x report_xml.xml -a'
 
-          
+      - name: Upload ZAP Reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: zap-reports-test
+          path: |
+            /zap/wrk/report_json.json
+            /zap/wrk/report_md.md
+            /zap/wrk/report_html.html
+            /zap/wrk/report_xml.xml          
