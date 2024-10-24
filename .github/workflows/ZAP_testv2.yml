@@ -1,0 +1,34 @@
+name: "Zap Testing 2"
+
+on:
+  push:
+    branches:
+      - feature/xmlreport
+
+jobs:            
+  zap_scan_dev:
+    runs-on: ubuntu-latest
+    name: Dev - ZAP Scanning
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+
+      - name: Run ZAP Full Scan
+        run: |
+          docker run -v ${{ github.workspace }}:/zap/wrk/:rw --network=host \
+            ghcr.io/zaproxy/zaproxy:latest zap-full-scan.py \
+            -t https://log8100-10-dev-2addd04e4cb7.herokuapp.com \
+            -J /zap/wrk/report_json.json \
+            -w /zap/wrk/report_md.md \
+            -r /zap/wrk/report_html.html \
+            -x /zap/wrk/report_xml.xml
+            
+      - name: Upload ZAP Reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: zap-reports
+          path: |
+            report_json.json
+            report_md.md
+            report_html.html
+            report_xml.xml
