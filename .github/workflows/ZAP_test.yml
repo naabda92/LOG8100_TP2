@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Scan the webapplication
     steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+    
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.11.0
         with:
