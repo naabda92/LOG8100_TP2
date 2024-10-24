@@ -15,7 +15,7 @@ jobs:
 
       - name: Run ZAP Full Scan
         run: |
-          docker run -v ${{ github.workspace }}:/zap/wrk/:rw --network=host \
+          docker run --user root -v ${{ github.workspace }}:/zap/wrk/:rw --network=host \
             ghcr.io/zaproxy/zaproxy:latest zap-full-scan.py \
             -t https://log8100-10-dev-2addd04e4cb7.herokuapp.com \
             -J report_json.json \
