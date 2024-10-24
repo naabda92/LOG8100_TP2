@@ -3,7 +3,7 @@ name: Enforce branch restrictions
 on:
   pull_request:
     branches:
-      - main
+      - develop
 
 jobs:
   check-branch:
