@@ -21,7 +21,7 @@ jobs:
             -J /zap/wrk/report_json.json \
             -r /zap/wrk/report_html.html \
             -x /zap/wrk/report_xml.xml \
-            -a || (echo "ZAP scan failed" && exit 1)
+            -a
             
       - name: Upload ZAP Reports
         uses: actions/upload-artifact@v3
