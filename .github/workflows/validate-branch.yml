@@ -10,9 +10,18 @@ jobs:
   check-branch:
     runs-on: ubuntu-latest
     steps:
-      - name: Ensure PR is from develop branch
+      - name: Ensure PR to main is from develop
+        if: github.ref == 'refs/heads/main'
         run: |
           if [[ "${{ github.head_ref }}" != "develop" ]]; then
             echo "Error: Pull requests to main must come from develop." >&2
+            exit 1
+          fi
+
+      - name: Ensure PR to develop is from any branch except main
+        if: github.ref == 'refs/heads/develop'
+        run: |
+          if [[ "${{ github.head_ref }}" == "main" ]]; then
+            echo "Error: Pull requests to develop cannot come from main." >&2
             exit 1
           fi
