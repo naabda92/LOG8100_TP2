@@ -1,9 +1,7 @@
 name: "Zap testing"
 
 on:
-  push:
-    branches:
-      - feature/xmlreport
+  workflow_dispatch:
      
 jobs:
   zap_scan:

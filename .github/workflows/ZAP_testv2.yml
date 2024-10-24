@@ -18,9 +18,9 @@ jobs:
           docker run -v ${{ github.workspace }}:/zap/wrk/:rw --network=host \
             ghcr.io/zaproxy/zaproxy:latest zap-full-scan.py \
             -t https://log8100-10-dev-2addd04e4cb7.herokuapp.com \
-            -J /zap/wrk/report_json.json \
-            -r /zap/wrk/report_html.html \
-            -x /zap/wrk/report_xml.xml \
+            -J report_json.json \
+            -r report_html.html \
+            -x report_xml.xml \
             -a
             
       - name: Upload ZAP Reports
