@@ -1,0 +1,2689 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.15.0",
+	"@generated": "Thu, 24 Oct 2024 03:02:07",
+	"site":[ 
+		{
+			"@name": "http://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+			"@host": "log8100-10-dev-2addd04e4cb7.herokuapp.com",
+			"@port": "80",
+			"@ssl": "false",
+			"alerts": [ 
+			]
+		},
+		{
+			"@name": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+			"@host": "log8100-10-dev-2addd04e4cb7.herokuapp.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-4",
+					"alert": "CSP: Wildcard Directive",
+					"name": "CSP: Wildcard Directive",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/robots.txt",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'none'",
+							"otherinfo": "The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined:\nframe-ancestors, form-action\n\nThe directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/sitemap.xml",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'none'",
+							"otherinfo": "The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined:\nframe-ancestors, form-action\n\nThe directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything."
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined:</p><p>frame-ancestors, form-action</p><p></p><p>The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</p>",
+					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "10"
+				},
+				{
+					"pluginid": "10038",
+					"alertRef": "10038-1",
+					"alert": "Content Security Policy (CSP) Header Not Set",
+					"name": "Content Security Policy (CSP) Header Not Set",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>https://www.w3.org/TR/CSP/</p><p>https://w3c.github.io/webappsec-csp/</p><p>https://web.dev/articles/csp</p><p>https://caniuse.com/#feat=contentsecuritypolicy</p><p>https://content-security-policy.com/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "20"
+				},
+				{
+					"pluginid": "10020",
+					"alertRef": "10020-1",
+					"alert": "Missing Anti-clickjacking Header",
+					"name": "Missing Anti-clickjacking Header",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The response does not protect against 'ClickJacking' attacks. It should include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
+					"cweid": "1021",
+					"wascid": "15",
+					"sourceid": "20"
+				},
+				{
+					"pluginid": "10040",
+					"alertRef": "10040",
+					"alert": "Secure Pages Include Mixed Content (Including Scripts)",
+					"name": "Secure Pages Include Mixed Content (Including Scripts)",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The page includes mixed content, that is content accessed via HTTP instead of HTTPS.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://html5shim.googlecode.com/svn/trunk/html5.js",
+							"otherinfo": "tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://html5shim.googlecode.com/svn/trunk/html5.js",
+							"otherinfo": "tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://html5shim.googlecode.com/svn/trunk/html5.js",
+							"otherinfo": "tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js\n"
+						}
+					],
+					"count": "3",
+					"solution": "<p>A page that is available over SSL/TLS must be comprised completely of content which is transmitted over SSL/TLS.</p><p>The page must not contain any content that is transmitted over unencrypted HTTP.</p><p>This includes content from third party sites.</p>",
+					"otherinfo": "<p>tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js</p><p></p>",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html</p>",
+					"cweid": "311",
+					"wascid": "4",
+					"sourceid": "20"
+				},
+				{
+					"pluginid": "90003",
+					"alertRef": "90003",
+					"alert": "Sub Resource Integrity Attribute Missing",
+					"name": "Sub Resource Integrity Attribute Missing",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link id=\"bootstrap_styles\" rel=\"stylesheet\"\n      href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" type=\"text/css\"/>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\"\n        src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link id=\"bootstrap_styles\" rel=\"stylesheet\"\n      href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" type=\"text/css\"/>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\"\n        src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "8",
+					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity</p>",
+					"cweid": "345",
+					"wascid": "15",
+					"sourceid": "20"
+				},
+				{
+					"pluginid": "10003",
+					"alertRef": "10003",
+					"alert": "Vulnerable JS Library",
+					"name": "Vulnerable JS Library",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The identified library jquery, version 3.2.1 is vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/jquery-3.2.1.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "jquery-3.2.1.min.js",
+							"otherinfo": "CVE-2020-11023\nCVE-2020-11022\nCVE-2019-11358\n"
+						}
+					],
+					"count": "1",
+					"solution": "<p>Please upgrade to the latest version of jquery.</p>",
+					"otherinfo": "<p>CVE-2020-11023</p><p>CVE-2020-11022</p><p>CVE-2019-11358</p><p></p>",
+					"reference": "<p>https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/</p><p>https://nvd.nist.gov/vuln/detail/CVE-2019-11358</p><p>https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b</p><p>https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/</p><p></p>",
+					"cweid": "829",
+					"wascid": "-1",
+					"sourceid": "21"
+				},
+				{
+					"pluginid": "40039",
+					"alertRef": "40039",
+					"alert": "Web Cache Deception",
+					"name": "Web Cache Deception",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Web cache deception may be possible. It may be possible for unauthorised user to view sensitive data on this page.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets",
+							"method": "GET",
+							"param": "",
+							"attack": "/test.css,/test.jpg,/test.js,/test.html,/test.gif,/test.png,/test.svg,/test.php,/test.txt,/test.pdf,/test.asp,",
+							"evidence": "",
+							"otherinfo": "Cached Authorised Response and Unauthorised Response are similar."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa",
+							"method": "GET",
+							"param": "",
+							"attack": "/test.css,/test.jpg,/test.js,/test.html,/test.gif,/test.png,/test.svg,/test.php,/test.txt,/test.pdf,/test.asp,",
+							"evidence": "",
+							"otherinfo": "Cached Authorised Response and Unauthorised Response are similar."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css",
+							"method": "GET",
+							"param": "",
+							"attack": "/test.css,/test.jpg,/test.js,/test.html,/test.gif,/test.png,/test.svg,/test.php,/test.txt,/test.pdf,/test.asp,",
+							"evidence": "",
+							"otherinfo": "Cached Authorised Response and Unauthorised Response are similar."
+						}
+					],
+					"count": "3",
+					"solution": "<p>It is strongly advised to refrain from classifying file types, such as images or stylesheets solely by their URL and file extension. Instead you should make sure that files are cached based on their Content-Type header.</p>",
+					"otherinfo": "<p>Cached Authorised Response and Unauthorised Response are similar.</p>",
+					"reference": "<p>https://blogs.akamai.com/2017/03/on-web-cache-deception-attacks.html</p><p>https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/web-cache-deception/</p>",
+					"cweid": "0",
+					"wascid": "0",
+					"sourceid": "3522"
+				},
+				{
+					"pluginid": "10011",
+					"alertRef": "10011",
+					"alert": "Cookie Without Secure Flag",
+					"name": "Cookie Without Secure Flag",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set without the secure flag, which means that the cookie can be accessed via unencrypted connections.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "connect.sid",
+							"attack": "",
+							"evidence": "Set-Cookie: connect.sid",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "connect.sid",
+							"attack": "",
+							"evidence": "Set-Cookie: connect.sid",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"solution": "<p>Whenever a cookie contains sensitive information or is a session token, then it should always be passed using an encrypted channel. Ensure that the secure flag is set for cookies containing such sensitive information.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html</p>",
+					"cweid": "614",
+					"wascid": "13",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10054",
+					"alertRef": "10054-1",
+					"alert": "Cookie without SameSite Attribute",
+					"name": "Cookie without SameSite Attribute",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "connect.sid",
+							"attack": "",
+							"evidence": "Set-Cookie: connect.sid",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "connect.sid",
+							"attack": "",
+							"evidence": "Set-Cookie: connect.sid",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site</p>",
+					"cweid": "1275",
+					"wascid": "13",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10017",
+					"alertRef": "10017",
+					"alert": "Cross-Domain JavaScript Source File Inclusion",
+					"name": "Cross-Domain JavaScript Source File Inclusion",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes one or more script files from a third-party domain.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "http://html5shim.googlecode.com/svn/trunk/html5.js",
+							"attack": "",
+							"evidence": "<script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\"\n        src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "http://html5shim.googlecode.com/svn/trunk/html5.js",
+							"attack": "",
+							"evidence": "<script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\"\n        src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "http://html5shim.googlecode.com/svn/trunk/html5.js",
+							"attack": "",
+							"evidence": "<script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\"\n        src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "9",
+					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "829",
+					"wascid": "15",
+					"sourceid": "20"
+				},
+				{
+					"pluginid": "10047",
+					"alertRef": "10047",
+					"alert": "HTTPS Content Available via HTTP",
+					"name": "HTTPS Content Available via HTTP",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Content which was initially accessed via HTTPS (i.e.: using SSL/TLS encryption) is also accessible via HTTP (without encryption).</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css/font-awesome.min.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css/font-awesome.min.css",
+							"otherinfo": "ZAP attempted to connect via: http://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css/font-awesome.min.css"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/jquery-3.2.1.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/jquery-3.2.1.min.js",
+							"otherinfo": "ZAP attempted to connect via: http://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/jquery-3.2.1.min.js"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/showdown.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/showdown.min.js",
+							"otherinfo": "ZAP attempted to connect via: http://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/showdown.min.js"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"otherinfo": "ZAP attempted to connect via: http://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"otherinfo": "ZAP attempted to connect via: http://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn"
+						}
+					],
+					"count": "5",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to only serve such content via HTTPS. Consider implementing HTTP Strict Transport Security.</p>",
+					"otherinfo": "<p>ZAP attempted to connect via: http://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css/font-awesome.min.css</p>",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>https://caniuse.com/stricttransportsecurity</p><p>https://datatracker.ietf.org/doc/html/rfc6797</p>",
+					"cweid": "311",
+					"wascid": "4",
+					"sourceid": "3304"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-1",
+					"alert": "Permissions Policy Header Not Set",
+					"name": "Permissions Policy Header Not Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/jquery-3.2.1.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/showdown.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "7",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "21"
+				},
+				{
+					"pluginid": "10037",
+					"alertRef": "10037",
+					"alert": "Server Leaks Information via \"X-Powered-By\" HTTP Response Header Field(s)",
+					"name": "Server Leaks Information via \"X-Powered-By\" HTTP Response Header Field(s)",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The web/application server is leaking information via one or more \"X-Powered-By\" HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "X-Powered-By: Express",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "X-Powered-By: Express",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css/font-awesome.min.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "X-Powered-By: Express",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "X-Powered-By: Express",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "X-Powered-By: Express",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "X-Powered-By: Express",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "X-Powered-By: Express",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "X-Powered-By: Express",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "X-Powered-By: Express",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "X-Powered-By: Express",
+							"otherinfo": ""
+						}
+					],
+					"count": "10",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress \"X-Powered-By\" headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework</p><p>https://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10035",
+					"alertRef": "10035-1",
+					"alert": "Strict-Transport-Security Header Not Set",
+					"name": "Strict-Transport-Security Header Not Set",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css/font-awesome.min.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/jquery-3.2.1.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/showdown.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "8",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>https://caniuse.com/stricttransportsecurity</p><p>https://datatracker.ietf.org/doc/html/rfc6797</p>",
+					"cweid": "319",
+					"wascid": "15",
+					"sourceid": "23"
+				},
+				{
+					"pluginid": "10096",
+					"alertRef": "10096",
+					"alert": "Timestamp Disclosure - Unix",
+					"name": "Timestamp Disclosure - Unix",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A timestamp was disclosed by the application/web server. - Unix</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Reporting-Endpoints",
+							"attack": "",
+							"evidence": "1729738799",
+							"otherinfo": "1729738799, which evaluates to: 2024-10-24 02:59:59."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Reporting-Endpoints",
+							"attack": "",
+							"evidence": "1729738797",
+							"otherinfo": "1729738797, which evaluates to: 2024-10-24 02:59:57."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Reporting-Endpoints",
+							"attack": "",
+							"evidence": "1729738799",
+							"otherinfo": "1729738799, which evaluates to: 2024-10-24 02:59:59."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css/font-awesome.min.css",
+							"method": "GET",
+							"param": "Reporting-Endpoints",
+							"attack": "",
+							"evidence": "1729738799",
+							"otherinfo": "1729738799, which evaluates to: 2024-10-24 02:59:59."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/jquery-3.2.1.min.js",
+							"method": "GET",
+							"param": "Reporting-Endpoints",
+							"attack": "",
+							"evidence": "1729738799",
+							"otherinfo": "1729738799, which evaluates to: 2024-10-24 02:59:59."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "Reporting-Endpoints",
+							"attack": "",
+							"evidence": "1729738799",
+							"otherinfo": "1729738799, which evaluates to: 2024-10-24 02:59:59."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Reporting-Endpoints",
+							"attack": "",
+							"evidence": "1729738797",
+							"otherinfo": "1729738797, which evaluates to: 2024-10-24 02:59:57."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Reporting-Endpoints",
+							"attack": "",
+							"evidence": "1729738799",
+							"otherinfo": "1729738799, which evaluates to: 2024-10-24 02:59:59."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "Reporting-Endpoints",
+							"attack": "",
+							"evidence": "1729738799",
+							"otherinfo": "1729738799, which evaluates to: 2024-10-24 02:59:59."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/robots.txt",
+							"method": "GET",
+							"param": "Reporting-Endpoints",
+							"attack": "",
+							"evidence": "1729738799",
+							"otherinfo": "1729738799, which evaluates to: 2024-10-24 02:59:59."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/sitemap.xml",
+							"method": "GET",
+							"param": "Reporting-Endpoints",
+							"attack": "",
+							"evidence": "1729738799",
+							"otherinfo": "1729738799, which evaluates to: 2024-10-24 02:59:59."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "Reporting-Endpoints",
+							"attack": "",
+							"evidence": "1729738799",
+							"otherinfo": "1729738799, which evaluates to: 2024-10-24 02:59:59."
+						}
+					],
+					"count": "12",
+					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
+					"otherinfo": "<p>1729738799, which evaluates to: 2024-10-24 02:59:59.</p>",
+					"reference": "<p>https://cwe.mitre.org/data/definitions/200.html</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10021",
+					"alertRef": "10021",
+					"alert": "X-Content-Type-Options Header Missing",
+					"name": "X-Content-Type-Options Header Missing",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css/font-awesome.min.css",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/jquery-3.2.1.min.js",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/showdown.min.js",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						}
+					],
+					"count": "6",
+					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
+					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
+					"reference": "<p>https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)</p><p>https://owasp.org/www-community/Security_Headers</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "23"
+				},
+				{
+					"pluginid": "10111",
+					"alertRef": "10111",
+					"alert": "Authentication Request Identified",
+					"name": "Authentication Request Identified",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>The given request has been identified as an authentication request. The 'Other Info' field contains a set of key=value lines which identify any relevant fields. If the request is in a context which has an Authentication Method set to \"Auto-Detect\" then this rule will change the authentication to match the request identified.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "username",
+							"attack": "",
+							"evidence": "password",
+							"otherinfo": "userParam=username\nuserValue=ZAP\npasswordParam=password\nreferer=https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login"
+						}
+					],
+					"count": "1",
+					"solution": "<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>",
+					"otherinfo": "<p>userParam=username</p><p>userValue=ZAP</p><p>passwordParam=password</p><p>referer=https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</p>",
+					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "30"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "3AytjSUEJHthnj4Hy-VjfdoxHfwNVJrxhE",
+							"otherinfo": "\uFFFD\\x000c\uFFFD\uFFFD%\\x0004${a\uFFFD>\\x0007\uFFFD\uFFFDc}\uFFFD1\\x001d\uFFFD\rT\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "3AR_PfZ0QTu1LjGmGrlzxi8NHBo0NBJYXl",
+							"otherinfo": "\uFFFD\\x0004=\uFFFDtA;\uFFFD.1\uFFFD\\x001a\uFFFDs\uFFFD/\r\\x001c\\x001a44\\x0012X^"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/showdown.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "disableForced4SpacesIndentedSublists",
+							"otherinfo": "v+\\x001anW\uFFFD\uFFFD\uFFFD\\x001ew\uFFFD\uFFFDi\u01EC\"w^\uFFFD\u05DDJ\uFFFD\uFFFD\uFFFDl"
+						}
+					],
+					"count": "3",
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>\uFFFD\\x000c\uFFFD\uFFFD%\\x0004${a\uFFFD>\\x0007\uFFFD\uFFFDc}\uFFFD1\\x001d\uFFFD\rT\uFFFD\uFFFD</p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "90027",
+					"alertRef": "90027",
+					"alert": "Cookie Slack Detector",
+					"name": "Cookie Slack Detector",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>Repeated GET requests: drop a different cookie each time, followed by normal request with all cookies to stabilize session, compare responses against original baseline GET. This can reveal areas where cookie based authentication/attributes are not actually enforced.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css/font-awesome.min.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/jquery-3.2.1.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/showdown.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
+						}
+					],
+					"count": "16",
+					"solution": "",
+					"otherinfo": "<p>Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.</p><p>These cookies affected the response: </p><p>These cookies did NOT affect the response: connect.sid</p><p></p>",
+					"reference": "<p>https://cwe.mitre.org/data/definitions/205.html</p>",
+					"cweid": "205",
+					"wascid": "45",
+					"sourceid": "3328"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/jquery-3.2.1.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "db",
+							"otherinfo": "The following pattern was used: \\bDB\\b and was detected 2 times, the first in the element starting with: \"a.removeEventListener(\"load\",S),r.ready()}\"complete\"===d.readyState||\"loading\"!==d.readyState&&!d.documentElement.doScroll?a.set\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/jquery-3.2.1.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"!function(a,b){\"use strict\";\"object\"==typeof module&&\"object\"==typeof module.exports?module.exports=a.document?b(a,!0):function(\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/showdown.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"(function(){function a(a){\"use strict\";var b={omitExtraWLInCodeBlocks:{defaultValue:!1,describe:\"Omit the default extra whitelin\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "3",
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bDB\\b and was detected 2 times, the first in the element starting with: \"a.removeEventListener(\"load\",S),r.ready()}\"complete\"===d.readyState||\"loading\"!==d.readyState&&!d.documentElement.doScroll?a.set\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "21"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Non-Storable Content",
+					"name": "Non-Storable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "302",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "302",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "302",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "302",
+							"otherinfo": ""
+						}
+					],
+					"count": "4",
+					"solution": "<p>The content may be marked as storable by ensuring that the following conditions are satisfied:</p><p>The request method must be understood by the cache and defined as being cacheable (\"GET\", \"HEAD\", and \"POST\" are currently defined as cacheable)</p><p>The response status code must be understood by the cache (one of the 1XX, 2XX, 3XX, 4XX, or 5XX response classes are generally understood)</p><p>The \"no-store\" cache directive must not appear in the request or response header fields</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"private\" response directive must not appear in the response</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"Authorization\" header field must not appear in the request, unless the response explicitly allows it (using one of the \"must-revalidate\", \"public\", or \"s-maxage\" Cache-Control response directives)</p><p>In addition to the conditions above, at least one of the following conditions must also be satisfied by the response:</p><p>It must contain an \"Expires\" header field</p><p>It must contain a \"max-age\" response directive</p><p>For \"shared\" caches such as \"proxy\" caches, it must contain a \"s-maxage\" response directive</p><p>It must contain a \"Cache Control Extension\" that allows it to be cached</p><p>It must have a status code that is defined as cacheable by default (200, 203, 204, 206, 300, 301, 404, 405, 410, 414, 501).</p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10015",
+					"alertRef": "10015",
+					"alert": "Re-examine Cache-control Directives",
+					"name": "Re-examine Cache-control Directives",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
+					"cweid": "525",
+					"wascid": "13",
+					"sourceid": "20"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-3",
+					"alert": "Sec-Fetch-Dest Header is Missing",
+					"name": "Sec-Fetch-Dest Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "4",
+					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-2",
+					"alert": "Sec-Fetch-Mode Header is Missing",
+					"name": "Sec-Fetch-Mode Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "4",
+					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-1",
+					"alert": "Sec-Fetch-Site Header is Missing",
+					"name": "Sec-Fetch-Site Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "4",
+					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-4",
+					"alert": "Sec-Fetch-User Header is Missing",
+					"name": "Sec-Fetch-User Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "4",
+					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10112",
+					"alertRef": "10112",
+					"alert": "Session Management Response Identified",
+					"name": "Session Management Response Identified",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "connect.sid",
+							"attack": "",
+							"evidence": "s%3AytjSUEJHthnj4Hy-VjfdoxHfwNVJrxhE.OcKfehyAsKwT%2FYaff6ZMxqLEB2X%2FKKdc4vWWlwAAbRA",
+							"otherinfo": "\ncookie:connect.sid"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "connect.sid",
+							"attack": "",
+							"evidence": "s%3AR_PfZ0QTu1LjGmGrlzxi8NHBo0NBJYXl.EdTBglvxU810xt9w%2Blp0o1iGKZetcvuzhNRH6x7eN%2FI",
+							"otherinfo": "\ncookie:connect.sid"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "connect.sid",
+							"attack": "",
+							"evidence": "s%3AytjSUEJHthnj4Hy-VjfdoxHfwNVJrxhE.OcKfehyAsKwT%2FYaff6ZMxqLEB2X%2FKKdc4vWWlwAAbRA",
+							"otherinfo": "\ncookie:connect.sid"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "connect.sid",
+							"attack": "",
+							"evidence": "s%3AR_PfZ0QTu1LjGmGrlzxi8NHBo0NBJYXl.EdTBglvxU810xt9w%2Blp0o1iGKZetcvuzhNRH6x7eN%2FI",
+							"otherinfo": "\ncookie:connect.sid"
+						}
+					],
+					"count": "4",
+					"solution": "<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>",
+					"otherinfo": "<p></p><p>cookie:connect.sid</p>",
+					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable and Cacheable Content",
+					"name": "Storable and Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						}
+					],
+					"count": "5",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
+					"otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "20"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable but Non-Cacheable Content",
+					"name": "Storable but Non-Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css/font-awesome.min.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "23"
+				},
+				{
+					"pluginid": "10104",
+					"alertRef": "10104",
+					"alert": "User Agent Fuzzer",
+					"name": "User Agent Fuzzer",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.</p>",
+					"instances":[ 
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "POST",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "122",
+					"solution": "",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/wstg</p>",
+					"cweid": "0",
+					"wascid": "0",
+					"sourceid": "2198"
+				}
+			]
+		}
+	]
+}
