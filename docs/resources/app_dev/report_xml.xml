@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<OWASPZAPReport programName="ZAP" version="2.15.0" generated="Thu, 24 Oct 2024 19:43:23">
+<OWASPZAPReport programName="ZAP" version="2.15.0" generated="Fri, 25 Oct 2024 00:12:16">
 	
 		<site name="http://log8100-10-dev-2addd04e4cb7.herokuapp.com" host="log8100-10-dev-2addd04e4cb7.herokuapp.com" port="80" ssl="false">
 			<alerts>
@@ -102,66 +102,6 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 							
 							
 								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
 									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
 									<method>GET</method>
 									<param></param>
@@ -181,13 +121,13 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 								</instance>
 							
 						</instances>
-						<count>11</count>
+						<count>5</count>
 						<solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.&lt;/p&gt;</solution>
 						<otherinfo></otherinfo>
 						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy&lt;/p&gt;&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html&lt;/p&gt;&lt;p&gt;https://www.w3.org/TR/CSP/&lt;/p&gt;&lt;p&gt;https://w3c.github.io/webappsec-csp/&lt;/p&gt;&lt;p&gt;https://web.dev/articles/csp&lt;/p&gt;&lt;p&gt;https://caniuse.com/#feat=contentsecuritypolicy&lt;/p&gt;&lt;p&gt;https://content-security-policy.com/&lt;/p&gt;</reference>
 						<cweid>693</cweid>
 						<wascid>15</wascid>
-						<sourceid>20</sourceid>
+						<sourceid>21</sourceid>
 					</alertitem>
 				
 				
@@ -234,66 +174,6 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 							
 							
 								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
-									<method>GET</method>
-									<param>x-frame-options</param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
-									<method>GET</method>
-									<param>x-frame-options</param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
-									<method>GET</method>
-									<param>x-frame-options</param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
-									<method>GET</method>
-									<param>x-frame-options</param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
-									<method>GET</method>
-									<param>x-frame-options</param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
-									<method>GET</method>
-									<param>x-frame-options</param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
 									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
 									<method>GET</method>
 									<param>x-frame-options</param>
@@ -313,13 +193,13 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 								</instance>
 							
 						</instances>
-						<count>11</count>
+						<count>5</count>
 						<solution>&lt;p&gt;Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.&lt;/p&gt;&lt;p&gt;If you expect the page to be framed only by pages on your server (e.g. it&apos;s part of a FRAMESET) then you&apos;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&apos;s &quot;frame-ancestors&quot; directive.&lt;/p&gt;</solution>
 						<otherinfo></otherinfo>
 						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options&lt;/p&gt;</reference>
 						<cweid>1021</cweid>
 						<wascid>15</wascid>
-						<sourceid>20</sourceid>
+						<sourceid>21</sourceid>
 					</alertitem>
 				
 				
@@ -369,72 +249,6 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 							
 							
 								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence>http://html5shim.googlecode.com/svn/trunk/html5.js</evidence>
-									<otherinfo>tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js
-</otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence>http://html5shim.googlecode.com/svn/trunk/html5.js</evidence>
-									<otherinfo>tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js
-</otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence>http://html5shim.googlecode.com/svn/trunk/html5.js</evidence>
-									<otherinfo>tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js
-</otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence>http://html5shim.googlecode.com/svn/trunk/html5.js</evidence>
-									<otherinfo>tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js
-</otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence>http://html5shim.googlecode.com/svn/trunk/html5.js</evidence>
-									<otherinfo>tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js
-</otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence>http://html5shim.googlecode.com/svn/trunk/html5.js</evidence>
-									<otherinfo>tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js
-</otherinfo>
-								</instance>
-							
-							
-								<instance>
 									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
 									<method>GET</method>
 									<param></param>
@@ -456,13 +270,13 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 								</instance>
 							
 						</instances>
-						<count>11</count>
+						<count>5</count>
 						<solution>&lt;p&gt;A page that is available over SSL/TLS must be comprised completely of content which is transmitted over SSL/TLS.&lt;/p&gt;&lt;p&gt;The page must not contain any content that is transmitted over unencrypted HTTP.&lt;/p&gt;&lt;p&gt;This includes content from third party sites.&lt;/p&gt;</solution>
 						<otherinfo>&lt;p&gt;tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</otherinfo>
 						<reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html&lt;/p&gt;</reference>
 						<cweid>311</cweid>
 						<wascid>4</wascid>
-						<sourceid>20</sourceid>
+						<sourceid>21</sourceid>
 					</alertitem>
 				
 				
@@ -494,7 +308,7 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 						<reference>&lt;p&gt;https://www.wsj.com/articles/BL-CIOB-2999&lt;/p&gt;</reference>
 						<cweid>540</cweid>
 						<wascid>13</wascid>
-						<sourceid>51</sourceid>
+						<sourceid>52</sourceid>
 					</alertitem>
 				
 				
@@ -593,14 +407,56 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 									<otherinfo></otherinfo>
 								</instance>
 							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;link id=&quot;bootstrap_styles&quot; rel=&quot;stylesheet&quot;
+      href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot; type=&quot;text/css&quot;/&gt;</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;script src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;script type=&quot;text/javascript&quot;
+        src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js&quot;&gt;&lt;/script&gt;</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;script type=&quot;text/javascript&quot; src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
 						</instances>
-						<count>8</count>
+						<count>12</count>
 						<solution>&lt;p&gt;Provide a valid integrity attribute to the tag.&lt;/p&gt;</solution>
 						<otherinfo></otherinfo>
 						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity&lt;/p&gt;</reference>
 						<cweid>345</cweid>
 						<wascid>15</wascid>
-						<sourceid>20</sourceid>
+						<sourceid>21</sourceid>
 					</alertitem>
 				
 				
@@ -635,7 +491,7 @@ CVE-2019-11358
 						<reference>&lt;p&gt;https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/&lt;/p&gt;&lt;p&gt;https://nvd.nist.gov/vuln/detail/CVE-2019-11358&lt;/p&gt;&lt;p&gt;https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b&lt;/p&gt;&lt;p&gt;https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</reference>
 						<cweid>829</cweid>
 						<wascid>-1</wascid>
-						<sourceid>21</sourceid>
+						<sourceid>27</sourceid>
 					</alertitem>
 				
 				
@@ -677,7 +533,7 @@ CVE-2019-11358
 						<reference>&lt;p&gt;https://blogs.akamai.com/2017/03/on-web-cache-deception-attacks.html&lt;/p&gt;&lt;p&gt;https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/web-cache-deception/&lt;/p&gt;</reference>
 						<cweid>0</cweid>
 						<wascid>0</wascid>
-						<sourceid>5816</sourceid>
+						<sourceid>5932</sourceid>
 					</alertitem>
 				
 				
@@ -876,7 +732,7 @@ CVE-2019-11358
 						<reference></reference>
 						<cweid>829</cweid>
 						<wascid>15</wascid>
-						<sourceid>20</sourceid>
+						<sourceid>21</sourceid>
 					</alertitem>
 				
 				
@@ -958,7 +814,7 @@ CVE-2019-11358
 						<reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html&lt;/p&gt;&lt;p&gt;https://owasp.org/www-community/Security_Headers&lt;/p&gt;&lt;p&gt;https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security&lt;/p&gt;&lt;p&gt;https://caniuse.com/stricttransportsecurity&lt;/p&gt;&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc6797&lt;/p&gt;</reference>
 						<cweid>311</cweid>
 						<wascid>4</wascid>
-						<sourceid>5564</sourceid>
+						<sourceid>5671</sourceid>
 					</alertitem>
 				
 				
@@ -1025,26 +881,6 @@ CVE-2019-11358
 							
 							
 								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
 									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
 									<method>GET</method>
 									<param></param>
@@ -1084,13 +920,13 @@ CVE-2019-11358
 								</instance>
 							
 						</instances>
-						<count>11</count>
+						<count>9</count>
 						<solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.&lt;/p&gt;</solution>
 						<otherinfo></otherinfo>
 						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy&lt;/p&gt;&lt;p&gt;https://developer.chrome.com/blog/feature-policy/&lt;/p&gt;&lt;p&gt;https://scotthelme.co.uk/a-new-security-header-feature-policy/&lt;/p&gt;&lt;p&gt;https://w3c.github.io/webappsec-feature-policy/&lt;/p&gt;&lt;p&gt;https://www.smashingmagazine.com/2018/12/feature-policy/&lt;/p&gt;</reference>
 						<cweid>693</cweid>
 						<wascid>15</wascid>
-						<sourceid>21</sourceid>
+						<sourceid>27</sourceid>
 					</alertitem>
 				
 				
@@ -1289,16 +1125,6 @@ CVE-2019-11358
 							
 							
 								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
 									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
 									<method>GET</method>
 									<param></param>
@@ -1338,13 +1164,13 @@ CVE-2019-11358
 								</instance>
 							
 						</instances>
-						<count>11</count>
+						<count>10</count>
 						<solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.&lt;/p&gt;</solution>
 						<otherinfo></otherinfo>
 						<reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html&lt;/p&gt;&lt;p&gt;https://owasp.org/www-community/Security_Headers&lt;/p&gt;&lt;p&gt;https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security&lt;/p&gt;&lt;p&gt;https://caniuse.com/stricttransportsecurity&lt;/p&gt;&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc6797&lt;/p&gt;</reference>
 						<cweid>319</cweid>
 						<wascid>15</wascid>
-						<sourceid>26</sourceid>
+						<sourceid>22</sourceid>
 					</alertitem>
 				
 				
@@ -1365,8 +1191,8 @@ CVE-2019-11358
 									<method>GET</method>
 									<param>Reporting-Endpoints</param>
 									<attack></attack>
-									<evidence>1729798810</evidence>
-									<otherinfo>1729798810, which evaluates to: 2024-10-24 19:40:10.</otherinfo>
+									<evidence>1729814944</evidence>
+									<otherinfo>1729814944, which evaluates to: 2024-10-25 00:09:04.</otherinfo>
 								</instance>
 							
 							
@@ -1375,8 +1201,8 @@ CVE-2019-11358
 									<method>GET</method>
 									<param>Reporting-Endpoints</param>
 									<attack></attack>
-									<evidence>1729798803</evidence>
-									<otherinfo>1729798803, which evaluates to: 2024-10-24 19:40:03.</otherinfo>
+									<evidence>1729814941</evidence>
+									<otherinfo>1729814941, which evaluates to: 2024-10-25 00:09:01.</otherinfo>
 								</instance>
 							
 							
@@ -1385,8 +1211,8 @@ CVE-2019-11358
 									<method>GET</method>
 									<param>Reporting-Endpoints</param>
 									<attack></attack>
-									<evidence>1729798810</evidence>
-									<otherinfo>1729798810, which evaluates to: 2024-10-24 19:40:10.</otherinfo>
+									<evidence>1729814944</evidence>
+									<otherinfo>1729814944, which evaluates to: 2024-10-25 00:09:04.</otherinfo>
 								</instance>
 							
 							
@@ -1395,8 +1221,8 @@ CVE-2019-11358
 									<method>GET</method>
 									<param>Reporting-Endpoints</param>
 									<attack></attack>
-									<evidence>1729798810</evidence>
-									<otherinfo>1729798810, which evaluates to: 2024-10-24 19:40:10.</otherinfo>
+									<evidence>1729814944</evidence>
+									<otherinfo>1729814944, which evaluates to: 2024-10-25 00:09:04.</otherinfo>
 								</instance>
 							
 							
@@ -1405,8 +1231,8 @@ CVE-2019-11358
 									<method>GET</method>
 									<param>Reporting-Endpoints</param>
 									<attack></attack>
-									<evidence>1729798810</evidence>
-									<otherinfo>1729798810, which evaluates to: 2024-10-24 19:40:10.</otherinfo>
+									<evidence>1729814944</evidence>
+									<otherinfo>1729814944, which evaluates to: 2024-10-25 00:09:04.</otherinfo>
 								</instance>
 							
 							
@@ -1415,8 +1241,8 @@ CVE-2019-11358
 									<method>GET</method>
 									<param>Reporting-Endpoints</param>
 									<attack></attack>
-									<evidence>1729798810</evidence>
-									<otherinfo>1729798810, which evaluates to: 2024-10-24 19:40:10.</otherinfo>
+									<evidence>1729814944</evidence>
+									<otherinfo>1729814944, which evaluates to: 2024-10-25 00:09:04.</otherinfo>
 								</instance>
 							
 							
@@ -1425,8 +1251,8 @@ CVE-2019-11358
 									<method>GET</method>
 									<param>Reporting-Endpoints</param>
 									<attack></attack>
-									<evidence>1729798808</evidence>
-									<otherinfo>1729798808, which evaluates to: 2024-10-24 19:40:08.</otherinfo>
+									<evidence>1729814941</evidence>
+									<otherinfo>1729814941, which evaluates to: 2024-10-25 00:09:01.</otherinfo>
 								</instance>
 							
 							
@@ -1435,8 +1261,8 @@ CVE-2019-11358
 									<method>GET</method>
 									<param>Reporting-Endpoints</param>
 									<attack></attack>
-									<evidence>1729798810</evidence>
-									<otherinfo>1729798810, which evaluates to: 2024-10-24 19:40:10.</otherinfo>
+									<evidence>1729814944</evidence>
+									<otherinfo>1729814944, which evaluates to: 2024-10-25 00:09:04.</otherinfo>
 								</instance>
 							
 							
@@ -1445,8 +1271,8 @@ CVE-2019-11358
 									<method>GET</method>
 									<param>Reporting-Endpoints</param>
 									<attack></attack>
-									<evidence>1729798810</evidence>
-									<otherinfo>1729798810, which evaluates to: 2024-10-24 19:40:10.</otherinfo>
+									<evidence>1729814944</evidence>
+									<otherinfo>1729814944, which evaluates to: 2024-10-25 00:09:04.</otherinfo>
 								</instance>
 							
 							
@@ -1455,8 +1281,8 @@ CVE-2019-11358
 									<method>GET</method>
 									<param>Reporting-Endpoints</param>
 									<attack></attack>
-									<evidence>1729798810</evidence>
-									<otherinfo>1729798810, which evaluates to: 2024-10-24 19:40:10.</otherinfo>
+									<evidence>1729814944</evidence>
+									<otherinfo>1729814944, which evaluates to: 2024-10-25 00:09:04.</otherinfo>
 								</instance>
 							
 							
@@ -1465,24 +1291,24 @@ CVE-2019-11358
 									<method>GET</method>
 									<param>Reporting-Endpoints</param>
 									<attack></attack>
-									<evidence>1729798810</evidence>
-									<otherinfo>1729798810, which evaluates to: 2024-10-24 19:40:10.</otherinfo>
+									<evidence>1729814944</evidence>
+									<otherinfo>1729814944, which evaluates to: 2024-10-25 00:09:04.</otherinfo>
 								</instance>
 							
 							
 								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw</uri>
 									<method>POST</method>
 									<param>Reporting-Endpoints</param>
 									<attack></attack>
-									<evidence>1729798810</evidence>
-									<otherinfo>1729798810, which evaluates to: 2024-10-24 19:40:10.</otherinfo>
+									<evidence>1729814944</evidence>
+									<otherinfo>1729814944, which evaluates to: 2024-10-25 00:09:04.</otherinfo>
 								</instance>
 							
 						</instances>
 						<count>12</count>
 						<solution>&lt;p&gt;Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.&lt;/p&gt;</solution>
-						<otherinfo>&lt;p&gt;1729798810, which evaluates to: 2024-10-24 19:40:10.&lt;/p&gt;</otherinfo>
+						<otherinfo>&lt;p&gt;1729814944, which evaluates to: 2024-10-25 00:09:04.&lt;/p&gt;</otherinfo>
 						<reference>&lt;p&gt;https://cwe.mitre.org/data/definitions/200.html&lt;/p&gt;</reference>
 						<cweid>200</cweid>
 						<wascid>13</wascid>
@@ -1569,39 +1395,6 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 							
 							
 								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
-									<method>GET</method>
-									<param>x-content-type-options</param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
-									<method>GET</method>
-									<param>x-content-type-options</param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
-									<method>GET</method>
-									<param>x-content-type-options</param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
-								</instance>
-							
-							
-								<instance>
 									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
 									<method>GET</method>
 									<param>x-content-type-options</param>
@@ -1623,13 +1416,13 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 								</instance>
 							
 						</instances>
-						<count>11</count>
+						<count>8</count>
 						<solution>&lt;p&gt;Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &apos;nosniff&apos; for all web pages.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.&lt;/p&gt;</solution>
 						<otherinfo>&lt;p&gt;This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.&lt;/p&gt;&lt;p&gt;At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.&lt;/p&gt;</otherinfo>
 						<reference>&lt;p&gt;https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)&lt;/p&gt;&lt;p&gt;https://owasp.org/www-community/Security_Headers&lt;/p&gt;</reference>
 						<cweid>693</cweid>
 						<wascid>15</wascid>
-						<sourceid>26</sourceid>
+						<sourceid>22</sourceid>
 					</alertitem>
 				
 				
@@ -1664,7 +1457,7 @@ referer=https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</otherinfo>
 						<reference>&lt;p&gt;https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/&lt;/p&gt;</reference>
 						<cweid>-1</cweid>
 						<wascid>-1</wascid>
-						<sourceid>30</sourceid>
+						<sourceid>31</sourceid>
 					</alertitem>
 				
 				
@@ -1685,8 +1478,8 @@ referer=https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</otherinfo>
 									<method>GET</method>
 									<param></param>
 									<attack></attack>
-									<evidence>3ACVtX1hy30hP-U0sMM6mISVROrqj5crGM</evidence>
-									<otherinfo>&#xfffd;&#xfffd;&#xfffd;}a&#xfffd;}!?&#xfffd;4&#xfffd;&#xfffd;:&#xfffd;&#xfffd;&#xfffd;D&#xfffd;&#xa3d7;+</otherinfo>
+									<evidence>3AiX4eWLZ9MkaIneH85iyn82MrOeW7K53F</evidence>
+									<otherinfo>&#xfffd;&#xfffd;&#xfffd;&#xfffd;g&#xfffd;$h&#xfffd;&#xfffd;&#xfffd;b&#xfffd;&#x7f;62&#xfffd;&#xfffd;[&#xfffd;&#xfffd;&#xfffd;</otherinfo>
 								</instance>
 							
 							
@@ -1695,8 +1488,8 @@ referer=https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</otherinfo>
 									<method>GET</method>
 									<param></param>
 									<attack></attack>
-									<evidence>S27hKN1emvmwZqxAeULleYsxgvXWl4C3O3hZdgj6UWs</evidence>
-									<otherinfo>Kn&#xfffd;(&#xfffd;^&#xfffd;&#xfffd;&#xfffd;f&#xfffd;@yB&#xfffd;y&#xfffd;1&#xfffd;&#xfffd;&#x597;&#xfffd;&#xfffd;;xYv&#xfffd;Qk</otherinfo>
+									<evidence>1IhNwMXCrin0G4XH1zMmTunxA2IefOIJZ1mtDVOtbvo</evidence>
+									<otherinfo>&#x508;M&#xfffd;&#xfffd;&#xae;)&#xfffd;&#xfffd;&#xfffd;&#xfffd;3&amp;N&#xfffd;&#xfffd;b|&#xfffd;	gY&#xfffd;S&#xfffd;n&#xfffd;</otherinfo>
 								</instance>
 							
 							
@@ -1711,78 +1504,18 @@ referer=https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</otherinfo>
 							
 							
 								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging</uri>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
 									<method>GET</method>
 									<param></param>
 									<attack></attack>
-									<evidence>php/Top_10-2017_A10-Insufficient_Logging</evidence>
-									<otherinfo>&#xfffd;&#x7f;N&#xfffd;&#x7f;&#xfffd;O&#xfffd;&#xfffd;^&#xfffd;]&gt;&quot;{.}&#xfffd;&#xfffd;&#xfffd;&#xfffd;&#xfffd;&#xfffd;&#xfffd; &#xfffd;)&#xfffd;</otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence>php/Top_10_2013-A6-Sensitive_Data_Exposure</evidence>
-									<otherinfo>&#xfffd;&#x7f;N&#xfffd;&#x7f;&#xfffd;O&#xfffd;&#xfffd;]&#xfffd;&#xfffd;&#xfffd;z{&quot;&#xfffd;+&#xfffd;&#xfffd;6&#xfffd;k&#xfffd;1&#xfffd;&#xfffd;.&#xfffd;</otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence>php/Top_10_2013-A7-Missing_Function_Level_Access_Control</evidence>
-									<otherinfo>&#xfffd;&#x7f;N&#xfffd;&#x7f;&#xfffd;O&#xfffd;&#xfffd;]&#xfffd;&#xfffd;&#xfffd;&#xfffd;&#xfffd;&quot;&#xfffd;&#x17a;w-&#xfffd;&#xfffd;&#xfffd;-&#xfffd;&#x797;&#xfffd;q&#xfffd;,&#xfffd;*&apos;&#xfffd;&#xfffd;%</otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence>php/Top_10_2013-A5-Security_Misconfiguration</evidence>
-									<otherinfo>&#xfffd;&#x7f;N&#xfffd;&#x7f;&#xfffd;O&#xfffd;&#xfffd;]&#xfffd;&#xfffd;&#xfffd;y&#x2eb;&#xfffd;&#x73f;2+&#xfffd;w&#xfffd;&#xfffd;&#x6b6;*&apos;</otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence>php/Top_10-2017_A8-Insecure_Deserialization</evidence>
-									<otherinfo>&#xfffd;&#x7f;N&#xfffd;&#x7f;&#xfffd;O&#xfffd;&#xfffd;^&#xfffd;&#x3c8;&#xfffd;&#x1dc;&#xfffd;&#xfffd;&#xfffd;&#xfffd;&#xfffd;&amp;&#xfffd;&#xfffd;6&#xfffd;&#xfffd;&#xfffd;</otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence>php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities</evidence>
-									<otherinfo>&#xfffd;&#x7f;N&#xfffd;&#x7f;&#xfffd;O&#xfffd;&#xfffd;]&#xfffd;&#x7d4;&#xfffd;)&#xfffd;&#xfffd;*&amp;&#xfffd;&#xfffd;&#x79e;&#xfffd;?&#xfffd;+a&#xfffd;&#xfffd;&#xfffd;&#xfffd;&#x7f;&#x57a;Y&#x7ad;&#xfffd;&#xfffd;+bz</otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence>php/Top_10_2013-A10-Unvalidated_Redirects_and_Forwards</evidence>
-									<otherinfo>&#xfffd;&#x7f;N&#xfffd;&#x7f;&#xfffd;O&#xfffd;&#xfffd;]&#xfffd;]&gt;R{&#x696;&apos;Z&#xfffd;&#xfffd;&#x7f;E&#xfffd;b&#xfffd;&#xfffd;-&#xfffd;&#xfffd;&#xfffd;w&#xfffd;h&#xfffd;&#xfffd;v</otherinfo>
+									<evidence>1IhNwMXCrin0G4XH1zMmTunxA2IefOIJZ1mtDVOtbvo</evidence>
+									<otherinfo>&#x508;M&#xfffd;&#xfffd;&#xae;)&#xfffd;&#xfffd;&#xfffd;&#xfffd;3&amp;N&#xfffd;&#xfffd;b|&#xfffd;	gY&#xfffd;S&#xfffd;n&#xfffd;</otherinfo>
 								</instance>
 							
 						</instances>
-						<count>10</count>
+						<count>4</count>
 						<solution>&lt;p&gt;Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.&lt;/p&gt;</solution>
-						<otherinfo>&lt;p&gt;&#xfffd;\x0000&#xfffd;&#xfffd;}a&#xfffd;}!?&#xfffd;4&#xfffd;&#xfffd;:&#xfffd;&#xfffd;&#xfffd;D&#xfffd;&#xa3d7;+\x0018&lt;/p&gt;</otherinfo>
+						<otherinfo>&lt;p&gt;&#xfffd;\x0008&#xfffd;&#xfffd;&#xfffd;g&#xfffd;$h&#xfffd;&#xfffd;\x001f&#xfffd;b&#xfffd;&#x7f;62&#xfffd;&#xfffd;[&#xfffd;&#xfffd;&#xfffd;&lt;/p&gt;</otherinfo>
 						<reference>&lt;p&gt;https://projects.webappsec.org/w/page/13246936/Information%20Leakage&lt;/p&gt;</reference>
 						<cweid>200</cweid>
 						<wascid>13</wascid>
@@ -1931,7 +1664,117 @@ These cookies did NOT affect the response: connect.sid
 							
 							
 								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
 									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a2_broken_auth</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect</uri>
 									<method>GET</method>
 									<param></param>
 									<attack></attack>
@@ -1947,7 +1790,9 @@ These cookies did NOT affect the response: connect.sid
 									<param></param>
 									<attack></attack>
 									<evidence></evidence>
-									<otherinfo>Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+									<otherinfo>Cookies that don&apos;t have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.
+These cookies affected the response: 
+These cookies did NOT affect the response: connect.sid
 </otherinfo>
 								</instance>
 							
@@ -1971,9 +1816,7 @@ These cookies did NOT affect the response: connect.sid
 									<param></param>
 									<attack></attack>
 									<evidence></evidence>
-									<otherinfo>Cookies that don&apos;t have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.
-These cookies affected the response: 
-These cookies did NOT affect the response: connect.sid
+									<otherinfo>Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
 </otherinfo>
 								</instance>
 							
@@ -2030,13 +1873,13 @@ These cookies did NOT affect the response: connect.sid
 								</instance>
 							
 						</instances>
-						<count>18</count>
+						<count>28</count>
 						<solution></solution>
 						<otherinfo>&lt;p&gt;Cookies that don&apos;t have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.&lt;/p&gt;&lt;p&gt;These cookies affected the response: &lt;/p&gt;&lt;p&gt;These cookies did NOT affect the response: connect.sid&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</otherinfo>
 						<reference>&lt;p&gt;https://cwe.mitre.org/data/definitions/205.html&lt;/p&gt;</reference>
 						<cweid>205</cweid>
 						<wascid>45</wascid>
-						<sourceid>5603</sourceid>
+						<sourceid>5708</sourceid>
 					</alertitem>
 				
 				
@@ -2088,7 +1931,7 @@ These cookies did NOT affect the response: connect.sid
 						<reference></reference>
 						<cweid>200</cweid>
 						<wascid>13</wascid>
-						<sourceid>21</sourceid>
+						<sourceid>27</sourceid>
 					</alertitem>
 				
 				
@@ -2197,66 +2040,6 @@ These cookies did NOT affect the response: connect.sid
 							
 							
 								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
-									<method>GET</method>
-									<param>cache-control</param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
-									<method>GET</method>
-									<param>cache-control</param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
-									<method>GET</method>
-									<param>cache-control</param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
-									<method>GET</method>
-									<param>cache-control</param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
-									<method>GET</method>
-									<param>cache-control</param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
-									<method>GET</method>
-									<param>cache-control</param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
 									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
 									<method>GET</method>
 									<param>cache-control</param>
@@ -2276,13 +2059,13 @@ These cookies did NOT affect the response: connect.sid
 								</instance>
 							
 						</instances>
-						<count>11</count>
+						<count>5</count>
 						<solution>&lt;p&gt;For secure content, ensure the cache-control HTTP header is set with &quot;no-cache, no-store, must-revalidate&quot;. If an asset should be cached consider setting the directives &quot;public, max-age, immutable&quot;.&lt;/p&gt;</solution>
 						<otherinfo></otherinfo>
 						<reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching&lt;/p&gt;&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control&lt;/p&gt;&lt;p&gt;https://grayduck.mn/2021/09/13/cache-control-recommendations/&lt;/p&gt;</reference>
 						<cweid>525</cweid>
 						<wascid>13</wascid>
-						<sourceid>20</sourceid>
+						<sourceid>21</sourceid>
 					</alertitem>
 				
 				
@@ -2511,7 +2294,7 @@ These cookies did NOT affect the response: connect.sid
 									<method>GET</method>
 									<param>connect.sid</param>
 									<attack></attack>
-									<evidence>s%3ACVtX1hy30hP-U0sMM6mISVROrqj5crGM.7LTsDyLe34lmV6%2B9voDUjUQktN03QAtayCa7OfOpqsQ</evidence>
+									<evidence>s%3AiX4eWLZ9MkaIneH85iyn82MrOeW7K53F.%2F40jcsomKerSFgotvQ358OB%2BD1P5IKIhAswJzk2JDZw</evidence>
 									<otherinfo>
 cookie:connect.sid</otherinfo>
 								</instance>
@@ -2522,7 +2305,7 @@ cookie:connect.sid</otherinfo>
 									<method>GET</method>
 									<param>connect.sid</param>
 									<attack></attack>
-									<evidence>s%3AzWO8fBmVQaNqSZaCWtMKQmfFHh8FMfgs.QkLSlsqUebwKpA%2BCKpsUnzb9%2Fb6YpJh3F3z3bND%2F2lA</evidence>
+									<evidence>s%3AbjpAbW-Da6OrfY_Z_G_cZ9nd8Hm1nnLs.DjikkDZJSIGygJaW%2BdtWiTOZwFNOy0VGch%2B%2FxPsXjjw</evidence>
 									<otherinfo>
 cookie:connect.sid</otherinfo>
 								</instance>
@@ -2533,24 +2316,13 @@ cookie:connect.sid</otherinfo>
 									<method>GET</method>
 									<param>connect.sid</param>
 									<attack></attack>
-									<evidence>s%3ACVtX1hy30hP-U0sMM6mISVROrqj5crGM.7LTsDyLe34lmV6%2B9voDUjUQktN03QAtayCa7OfOpqsQ</evidence>
-									<otherinfo>
-cookie:connect.sid</otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/</uri>
-									<method>GET</method>
-									<param>connect.sid</param>
-									<attack></attack>
-									<evidence>s%3AzWO8fBmVQaNqSZaCWtMKQmfFHh8FMfgs.QkLSlsqUebwKpA%2BCKpsUnzb9%2Fb6YpJh3F3z3bND%2F2lA</evidence>
+									<evidence>s%3AiX4eWLZ9MkaIneH85iyn82MrOeW7K53F.%2F40jcsomKerSFgotvQ358OB%2BD1P5IKIhAswJzk2JDZw</evidence>
 									<otherinfo>
 cookie:connect.sid</otherinfo>
 								</instance>
 							
 						</instances>
-						<count>4</count>
+						<count>3</count>
 						<solution>&lt;p&gt;This is an informational alert rather than a vulnerability and so there is nothing to fix.&lt;/p&gt;</solution>
 						<otherinfo>&lt;p&gt;&lt;/p&gt;&lt;p&gt;cookie:connect.sid&lt;/p&gt;</otherinfo>
 						<reference>&lt;p&gt;https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id&lt;/p&gt;</reference>
@@ -2628,7 +2400,7 @@ cookie:connect.sid</otherinfo>
 						<reference>&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7234&lt;/p&gt;&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7231&lt;/p&gt;&lt;p&gt;https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html&lt;/p&gt;</reference>
 						<cweid>524</cweid>
 						<wascid>13</wascid>
-						<sourceid>20</sourceid>
+						<sourceid>21</sourceid>
 					</alertitem>
 				
 				
@@ -2660,7 +2432,7 @@ cookie:connect.sid</otherinfo>
 						<reference>&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7234&lt;/p&gt;&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7231&lt;/p&gt;&lt;p&gt;https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html&lt;/p&gt;</reference>
 						<cweid>524</cweid>
 						<wascid>13</wascid>
-						<sourceid>26</sourceid>
+						<sourceid>22</sourceid>
 					</alertitem>
 				
 				
@@ -3170,24 +2942,14 @@ cookie:connect.sid</otherinfo>
 									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
-									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
 									<evidence></evidence>
 									<otherinfo></otherinfo>
 								</instance>
 							
 							
 								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn</uri>
-									<method>GET</method>
-									<param>Header User-Agent</param>
-									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn</uri>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
 									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
@@ -3197,10 +2959,120 @@ cookie:connect.sid</otherinfo>
 							
 							
 								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn</uri>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
 									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
 									<evidence></evidence>
 									<otherinfo></otherinfo>
 								</instance>
@@ -3321,6 +3193,1106 @@ cookie:connect.sid</otherinfo>
 									<method>GET</method>
 									<param>Header User-Agent</param>
 									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
 									<evidence></evidence>
 									<otherinfo></otherinfo>
 								</instance>
@@ -3337,6 +4309,96 @@ cookie:connect.sid</otherinfo>
 							
 							
 								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
 									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/logout</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
@@ -3461,16 +4523,6 @@ cookie:connect.sid</otherinfo>
 									<method>GET</method>
 									<param>Header User-Agent</param>
 									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register</uri>
-									<method>GET</method>
-									<param>Header User-Agent</param>
-									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
 									<evidence></evidence>
 									<otherinfo></otherinfo>
 								</instance>
@@ -3716,13 +4768,13 @@ cookie:connect.sid</otherinfo>
 								</instance>
 							
 						</instances>
-						<count>104</count>
+						<count>232</count>
 						<solution></solution>
 						<otherinfo></otherinfo>
 						<reference>&lt;p&gt;https://owasp.org/wstg&lt;/p&gt;</reference>
 						<cweid>0</cweid>
 						<wascid>0</wascid>
-						<sourceid>3680</sourceid>
+						<sourceid>3654</sourceid>
 					</alertitem>
 				
 			</alerts>
