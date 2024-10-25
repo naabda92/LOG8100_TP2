@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.15.0",
-	"@generated": "Thu, 24 Oct 2024 19:43:23",
+	"@generated": "Fri, 25 Oct 2024 00:12:16",
 	"site":[ 
 		{
 			"@name": "http://log8100-10-dev-2addd04e4cb7.herokuapp.com",
@@ -87,54 +87,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
 							"method": "GET",
 							"param": "",
@@ -151,13 +103,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "11",
+					"count": "5",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>https://www.w3.org/TR/CSP/</p><p>https://w3c.github.io/webappsec-csp/</p><p>https://web.dev/articles/csp</p><p>https://caniuse.com/#feat=contentsecuritypolicy</p><p>https://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "20"
+					"sourceid": "21"
 				},
 				{
 					"pluginid": "10020",
@@ -194,54 +146,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
-							"method": "GET",
-							"param": "x-frame-options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
-							"method": "GET",
-							"param": "x-frame-options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
-							"method": "GET",
-							"param": "x-frame-options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
-							"method": "GET",
-							"param": "x-frame-options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
-							"method": "GET",
-							"param": "x-frame-options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
-							"method": "GET",
-							"param": "x-frame-options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
 							"method": "GET",
 							"param": "x-frame-options",
@@ -258,13 +162,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "11",
+					"count": "5",
 					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
 					"cweid": "1021",
 					"wascid": "15",
-					"sourceid": "20"
+					"sourceid": "21"
 				},
 				{
 					"pluginid": "10040",
@@ -301,54 +205,6 @@
 							"otherinfo": "tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js\n"
 						},
 						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "http://html5shim.googlecode.com/svn/trunk/html5.js",
-							"otherinfo": "tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js\n"
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "http://html5shim.googlecode.com/svn/trunk/html5.js",
-							"otherinfo": "tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js\n"
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "http://html5shim.googlecode.com/svn/trunk/html5.js",
-							"otherinfo": "tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js\n"
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "http://html5shim.googlecode.com/svn/trunk/html5.js",
-							"otherinfo": "tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js\n"
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "http://html5shim.googlecode.com/svn/trunk/html5.js",
-							"otherinfo": "tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js\n"
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "http://html5shim.googlecode.com/svn/trunk/html5.js",
-							"otherinfo": "tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js\n"
-						},
-						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
 							"method": "GET",
 							"param": "",
@@ -365,13 +221,13 @@
 							"otherinfo": "tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js\n"
 						}
 					],
-					"count": "11",
+					"count": "5",
 					"solution": "<p>A page that is available over SSL/TLS must be comprised completely of content which is transmitted over SSL/TLS.</p><p>The page must not contain any content that is transmitted over unencrypted HTTP.</p><p>This includes content from third party sites.</p>",
 					"otherinfo": "<p>tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js</p><p></p>",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html</p>",
 					"cweid": "311",
 					"wascid": "4",
-					"sourceid": "20"
+					"sourceid": "21"
 				},
 				{
 					"pluginid": "10099",
@@ -398,7 +254,7 @@
 					"reference": "<p>https://www.wsj.com/articles/BL-CIOB-2999</p>",
 					"cweid": "540",
 					"wascid": "13",
-					"sourceid": "51"
+					"sourceid": "52"
 				},
 				{
 					"pluginid": "90003",
@@ -473,15 +329,47 @@
 							"attack": "",
 							"evidence": "<script type=\"text/javascript\" src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>",
 							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link id=\"bootstrap_styles\" rel=\"stylesheet\"\n      href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" type=\"text/css\"/>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\"\n        src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>",
+							"otherinfo": ""
 						}
 					],
-					"count": "8",
+					"count": "12",
 					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity</p>",
 					"cweid": "345",
 					"wascid": "15",
-					"sourceid": "20"
+					"sourceid": "21"
 				},
 				{
 					"pluginid": "10003",
@@ -508,7 +396,7 @@
 					"reference": "<p>https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/</p><p>https://nvd.nist.gov/vuln/detail/CVE-2019-11358</p><p>https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b</p><p>https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/</p><p></p>",
 					"cweid": "829",
 					"wascid": "-1",
-					"sourceid": "21"
+					"sourceid": "27"
 				},
 				{
 					"pluginid": "40039",
@@ -543,7 +431,7 @@
 					"reference": "<p>https://blogs.akamai.com/2017/03/on-web-cache-deception-attacks.html</p><p>https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/web-cache-deception/</p>",
 					"cweid": "0",
 					"wascid": "0",
-					"sourceid": "5816"
+					"sourceid": "5932"
 				},
 				{
 					"pluginid": "10011",
@@ -704,7 +592,7 @@
 					"reference": "",
 					"cweid": "829",
 					"wascid": "15",
-					"sourceid": "20"
+					"sourceid": "21"
 				},
 				{
 					"pluginid": "10047",
@@ -771,7 +659,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>https://caniuse.com/stricttransportsecurity</p><p>https://datatracker.ietf.org/doc/html/rfc6797</p>",
 					"cweid": "311",
 					"wascid": "4",
-					"sourceid": "5564"
+					"sourceid": "5671"
 				},
 				{
 					"pluginid": "10063",
@@ -824,22 +712,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
 							"method": "GET",
 							"param": "",
@@ -872,13 +744,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "11",
+					"count": "9",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "21"
+					"sourceid": "27"
 				},
 				{
 					"pluginid": "10037",
@@ -1038,14 +910,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
 							"method": "GET",
 							"param": "",
@@ -1078,13 +942,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "11",
+					"count": "10",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>https://caniuse.com/stricttransportsecurity</p><p>https://datatracker.ietf.org/doc/html/rfc6797</p>",
 					"cweid": "319",
 					"wascid": "15",
-					"sourceid": "26"
+					"sourceid": "22"
 				},
 				{
 					"pluginid": "10096",
@@ -1101,101 +965,101 @@
 							"method": "GET",
 							"param": "Reporting-Endpoints",
 							"attack": "",
-							"evidence": "1729798810",
-							"otherinfo": "1729798810, which evaluates to: 2024-10-24 19:40:10."
+							"evidence": "1729814944",
+							"otherinfo": "1729814944, which evaluates to: 2024-10-25 00:09:04."
 						},
 						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
 							"method": "GET",
 							"param": "Reporting-Endpoints",
 							"attack": "",
-							"evidence": "1729798803",
-							"otherinfo": "1729798803, which evaluates to: 2024-10-24 19:40:03."
+							"evidence": "1729814941",
+							"otherinfo": "1729814941, which evaluates to: 2024-10-25 00:09:01."
 						},
 						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
 							"method": "GET",
 							"param": "Reporting-Endpoints",
 							"attack": "",
-							"evidence": "1729798810",
-							"otherinfo": "1729798810, which evaluates to: 2024-10-24 19:40:10."
+							"evidence": "1729814944",
+							"otherinfo": "1729814944, which evaluates to: 2024-10-25 00:09:04."
 						},
 						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css/font-awesome.min.css",
 							"method": "GET",
 							"param": "Reporting-Endpoints",
 							"attack": "",
-							"evidence": "1729798810",
-							"otherinfo": "1729798810, which evaluates to: 2024-10-24 19:40:10."
+							"evidence": "1729814944",
+							"otherinfo": "1729814944, which evaluates to: 2024-10-25 00:09:04."
 						},
 						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/showdown.min.js",
 							"method": "GET",
 							"param": "Reporting-Endpoints",
 							"attack": "",
-							"evidence": "1729798810",
-							"otherinfo": "1729798810, which evaluates to: 2024-10-24 19:40:10."
+							"evidence": "1729814944",
+							"otherinfo": "1729814944, which evaluates to: 2024-10-25 00:09:04."
 						},
 						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
 							"method": "GET",
 							"param": "Reporting-Endpoints",
 							"attack": "",
-							"evidence": "1729798810",
-							"otherinfo": "1729798810, which evaluates to: 2024-10-24 19:40:10."
+							"evidence": "1729814944",
+							"otherinfo": "1729814944, which evaluates to: 2024-10-25 00:09:04."
 						},
 						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
 							"method": "GET",
 							"param": "Reporting-Endpoints",
 							"attack": "",
-							"evidence": "1729798808",
-							"otherinfo": "1729798808, which evaluates to: 2024-10-24 19:40:08."
+							"evidence": "1729814941",
+							"otherinfo": "1729814941, which evaluates to: 2024-10-25 00:09:01."
 						},
 						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
 							"method": "GET",
 							"param": "Reporting-Endpoints",
 							"attack": "",
-							"evidence": "1729798810",
-							"otherinfo": "1729798810, which evaluates to: 2024-10-24 19:40:10."
+							"evidence": "1729814944",
+							"otherinfo": "1729814944, which evaluates to: 2024-10-25 00:09:04."
 						},
 						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
 							"method": "GET",
 							"param": "Reporting-Endpoints",
 							"attack": "",
-							"evidence": "1729798810",
-							"otherinfo": "1729798810, which evaluates to: 2024-10-24 19:40:10."
+							"evidence": "1729814944",
+							"otherinfo": "1729814944, which evaluates to: 2024-10-25 00:09:04."
 						},
 						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/robots.txt",
 							"method": "GET",
 							"param": "Reporting-Endpoints",
 							"attack": "",
-							"evidence": "1729798810",
-							"otherinfo": "1729798810, which evaluates to: 2024-10-24 19:40:10."
+							"evidence": "1729814944",
+							"otherinfo": "1729814944, which evaluates to: 2024-10-25 00:09:04."
 						},
 						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/sitemap.xml",
 							"method": "GET",
 							"param": "Reporting-Endpoints",
 							"attack": "",
-							"evidence": "1729798810",
-							"otherinfo": "1729798810, which evaluates to: 2024-10-24 19:40:10."
+							"evidence": "1729814944",
+							"otherinfo": "1729814944, which evaluates to: 2024-10-25 00:09:04."
 						},
 						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
 							"method": "POST",
 							"param": "Reporting-Endpoints",
 							"attack": "",
-							"evidence": "1729798810",
-							"otherinfo": "1729798810, which evaluates to: 2024-10-24 19:40:10."
+							"evidence": "1729814944",
+							"otherinfo": "1729814944, which evaluates to: 2024-10-25 00:09:04."
 						}
 					],
 					"count": "12",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>1729798810, which evaluates to: 2024-10-24 19:40:10.</p>",
+					"otherinfo": "<p>1729814944, which evaluates to: 2024-10-25 00:09:04.</p>",
 					"reference": "<p>https://cwe.mitre.org/data/definitions/200.html</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -1260,30 +1124,6 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
-							"method": "GET",
-							"param": "x-content-type-options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
-							"method": "GET",
-							"param": "x-content-type-options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
-							"method": "GET",
-							"param": "x-content-type-options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
-						},
-						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
 							"method": "GET",
 							"param": "x-content-type-options",
@@ -1300,13 +1140,13 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						}
 					],
-					"count": "11",
+					"count": "8",
 					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
 					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
 					"reference": "<p>https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)</p><p>https://owasp.org/www-community/Security_Headers</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "26"
+					"sourceid": "22"
 				},
 				{
 					"pluginid": "10111",
@@ -1333,7 +1173,7 @@
 					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/</p>",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "30"
+					"sourceid": "31"
 				},
 				{
 					"pluginid": "10094",
@@ -1350,16 +1190,16 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "3ACVtX1hy30hP-U0sMM6mISVROrqj5crGM",
-							"otherinfo": "\uFFFD\\x0000\uFFFD\uFFFD}a\uFFFD}!?\uFFFD4\uFFFD\uFFFD:\uFFFD\uFFFD\uFFFDD\uFFFD\uA3D7+\\x0018"
+							"evidence": "3AiX4eWLZ9MkaIneH85iyn82MrOeW7K53F",
+							"otherinfo": "\uFFFD\\x0008\uFFFD\uFFFD\uFFFDg\uFFFD$h\uFFFD\uFFFD\\x001f\uFFFDb\uFFFD62\uFFFD\uFFFD[\uFFFD\uFFFD\uFFFD"
 						},
 						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "S27hKN1emvmwZqxAeULleYsxgvXWl4C3O3hZdgj6UWs",
-							"otherinfo": "Kn\uFFFD(\uFFFD^\uFFFD\uFFFD\uFFFDf\uFFFD@yB\uFFFDy\uFFFD1\uFFFD\uFFFD\u0597\uFFFD\uFFFD;xYv\\x0008\uFFFDQk"
+							"evidence": "1IhNwMXCrin0G4XH1zMmTunxA2IefOIJZ1mtDVOtbvo",
+							"otherinfo": "\u0508M\uFFFD\uFFFD\u00AE)\uFFFD\\x001b\uFFFD\uFFFD\uFFFD3&N\uFFFD\uFFFD\\x0003b\\x001e|\uFFFD\tgY\uFFFD\rS\uFFFDn\uFFFD"
 						},
 						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/showdown.min.js",
@@ -1370,65 +1210,17 @@
 							"otherinfo": "v+\\x001anW\uFFFD\uFFFD\uFFFD\\x001ew\uFFFD\uFFFDi\u01EC\"w^\uFFFD\u05DDJ\uFFFD\uFFFD\uFFFDl"
 						},
 						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging",
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "php/Top_10-2017_A10-Insufficient_Logging",
-							"otherinfo": "\uFFFD\\x001aN\uFFFD\uFFFDO\uFFFD\uFFFD^\uFFFD\\x0003]>\"{.}\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD \uFFFD)\uFFFD"
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "php/Top_10_2013-A6-Sensitive_Data_Exposure",
-							"otherinfo": "\uFFFD\\x001aN\uFFFD\uFFFDO\uFFFD\uFFFD]\uFFFD\\x0003\uFFFD\uFFFDz{\"\uFFFD+\uFFFD\uFFFD6\uFFFDk\uFFFD1\uFFFD\uFFFD.\uFFFD"
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "php/Top_10_2013-A7-Missing_Function_Level_Access_Control",
-							"otherinfo": "\uFFFD\\x001aN\uFFFD\uFFFDO\uFFFD\uFFFD]\uFFFD\\x0003\uFFFD\uFFFD\uFFFD\uFFFD\"\uFFFD\\x000f\u017Aw-\uFFFD\uFFFD\uFFFD-\uFFFD\u0797\uFFFD\\x001cq\uFFFD,\uFFFD*'\uFFFD\uFFFD%"
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "php/Top_10_2013-A5-Security_Misconfiguration",
-							"otherinfo": "\uFFFD\\x001aN\uFFFD\uFFFDO\uFFFD\uFFFD]\uFFFD\\x0003\uFFFD\uFFFDy\u02EB\uFFFD\u073F2+\\x001c\uFFFDw\uFFFD\uFFFD\u06B6*'"
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "php/Top_10-2017_A8-Insecure_Deserialization",
-							"otherinfo": "\uFFFD\\x001aN\uFFFD\uFFFDO\uFFFD\uFFFD^\uFFFD\\x0003\u03C8\uFFFD\u01DC\uFFFD\uFFFD\uFFFD\r\uFFFD\\x001e\uFFFD&\uFFFD\uFFFD6\uFFFD\uFFFD\uFFFD"
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities",
-							"otherinfo": "\uFFFD\\x001aN\uFFFD\uFFFDO\uFFFD\uFFFD]\uFFFD\\x0003\u07D4\uFFFD)\uFFFD\uFFFD*&\uFFFD\uFFFD\u079E\uFFFD?\uFFFD+a\uFFFD\uFFFD\uFFFD\uFFFD\u057AY\u07AD\uFFFD\uFFFD+bz"
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "php/Top_10_2013-A10-Unvalidated_Redirects_and_Forwards",
-							"otherinfo": "\uFFFD\\x001aN\uFFFD\uFFFDO\uFFFD\uFFFD]\uFFFD\\x0003]>R{\u0696'Z\uFFFD\uFFFDE\uFFFDb\uFFFD\uFFFD-\uFFFD\uFFFD\uFFFDw\uFFFDh\uFFFD\\x0006\uFFFDv"
+							"evidence": "1IhNwMXCrin0G4XH1zMmTunxA2IefOIJZ1mtDVOtbvo",
+							"otherinfo": "\u0508M\uFFFD\uFFFD\u00AE)\uFFFD\\x001b\uFFFD\uFFFD\uFFFD3&N\uFFFD\uFFFD\\x0003b\\x001e|\uFFFD\tgY\uFFFD\rS\uFFFDn\uFFFD"
 						}
 					],
-					"count": "10",
+					"count": "4",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>\uFFFD\\x0000\uFFFD\uFFFD}a\uFFFD}!?\uFFFD4\uFFFD\uFFFD:\uFFFD\uFFFD\uFFFDD\uFFFD\uA3D7+\\x0018</p>",
+					"otherinfo": "<p>\uFFFD\\x0008\uFFFD\uFFFD\uFFFDg\uFFFD$h\uFFFD\uFFFD\\x001f\uFFFDb\uFFFD62\uFFFD\uFFFD[\uFFFD\uFFFD\uFFFD</p>",
 					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -1525,7 +1317,87 @@
 							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
 						},
 						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a2_broken_auth",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1538,7 +1410,7 @@
 							"param": "",
 							"attack": "",
 							"evidence": "",
-							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
 						},
 						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/logout",
@@ -1554,7 +1426,7 @@
 							"param": "",
 							"attack": "",
 							"evidence": "",
-							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.\n"
 						},
 						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/robots.txt",
@@ -1589,13 +1461,13 @@
 							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: connect.sid\n"
 						}
 					],
-					"count": "18",
+					"count": "28",
 					"solution": "",
 					"otherinfo": "<p>Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.</p><p>These cookies affected the response: </p><p>These cookies did NOT affect the response: connect.sid</p><p></p>",
 					"reference": "<p>https://cwe.mitre.org/data/definitions/205.html</p>",
 					"cweid": "205",
 					"wascid": "45",
-					"sourceid": "5603"
+					"sourceid": "5708"
 				},
 				{
 					"pluginid": "10027",
@@ -1638,7 +1510,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "21"
+					"sourceid": "27"
 				},
 				{
 					"pluginid": "10049",
@@ -1726,54 +1598,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
-							"method": "GET",
-							"param": "cache-control",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
-							"method": "GET",
-							"param": "cache-control",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
-							"method": "GET",
-							"param": "cache-control",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
-							"method": "GET",
-							"param": "cache-control",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
-							"method": "GET",
-							"param": "cache-control",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
-							"method": "GET",
-							"param": "cache-control",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
 							"method": "GET",
 							"param": "cache-control",
@@ -1790,13 +1614,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "11",
+					"count": "5",
 					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
 					"cweid": "525",
 					"wascid": "13",
-					"sourceid": "20"
+					"sourceid": "21"
 				},
 				{
 					"pluginid": "90005",
@@ -1985,7 +1809,7 @@
 							"method": "GET",
 							"param": "connect.sid",
 							"attack": "",
-							"evidence": "s%3ACVtX1hy30hP-U0sMM6mISVROrqj5crGM.7LTsDyLe34lmV6%2B9voDUjUQktN03QAtayCa7OfOpqsQ",
+							"evidence": "s%3AiX4eWLZ9MkaIneH85iyn82MrOeW7K53F.%2F40jcsomKerSFgotvQ358OB%2BD1P5IKIhAswJzk2JDZw",
 							"otherinfo": "\ncookie:connect.sid"
 						},
 						{
@@ -1993,7 +1817,7 @@
 							"method": "GET",
 							"param": "connect.sid",
 							"attack": "",
-							"evidence": "s%3AzWO8fBmVQaNqSZaCWtMKQmfFHh8FMfgs.QkLSlsqUebwKpA%2BCKpsUnzb9%2Fb6YpJh3F3z3bND%2F2lA",
+							"evidence": "s%3AbjpAbW-Da6OrfY_Z_G_cZ9nd8Hm1nnLs.DjikkDZJSIGygJaW%2BdtWiTOZwFNOy0VGch%2B%2FxPsXjjw",
 							"otherinfo": "\ncookie:connect.sid"
 						},
 						{
@@ -2001,19 +1825,11 @@
 							"method": "GET",
 							"param": "connect.sid",
 							"attack": "",
-							"evidence": "s%3ACVtX1hy30hP-U0sMM6mISVROrqj5crGM.7LTsDyLe34lmV6%2B9voDUjUQktN03QAtayCa7OfOpqsQ",
-							"otherinfo": "\ncookie:connect.sid"
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/",
-							"method": "GET",
-							"param": "connect.sid",
-							"attack": "",
-							"evidence": "s%3AzWO8fBmVQaNqSZaCWtMKQmfFHh8FMfgs.QkLSlsqUebwKpA%2BCKpsUnzb9%2Fb6YpJh3F3z3bND%2F2lA",
+							"evidence": "s%3AiX4eWLZ9MkaIneH85iyn82MrOeW7K53F.%2F40jcsomKerSFgotvQ358OB%2BD1P5IKIhAswJzk2JDZw",
 							"otherinfo": "\ncookie:connect.sid"
 						}
 					],
-					"count": "4",
+					"count": "3",
 					"solution": "<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>",
 					"otherinfo": "<p></p><p>cookie:connect.sid</p>",
 					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id</p>",
@@ -2078,7 +1894,7 @@
 					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "20"
+					"sourceid": "21"
 				},
 				{
 					"pluginid": "10049",
@@ -2105,7 +1921,7 @@
 					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "26"
+					"sourceid": "22"
 				},
 				{
 					"pluginid": "10104",
@@ -2513,20 +2329,12 @@
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
 							"method": "GET",
 							"param": "Header User-Agent",
-							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
 							"evidence": "",
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
-							"method": "GET",
-							"param": "Header User-Agent",
-							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw",
 							"method": "GET",
 							"param": "Header User-Agent",
 							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
@@ -2534,10 +2342,98 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn",
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging",
 							"method": "GET",
 							"param": "Header User-Agent",
 							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
 							"evidence": "",
 							"otherinfo": ""
 						},
@@ -2634,6 +2530,886 @@
 							"method": "GET",
 							"param": "Header User-Agent",
 							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
 							"evidence": "",
 							"otherinfo": ""
 						},
@@ -2646,6 +3422,78 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/logout",
 							"method": "GET",
 							"param": "Header User-Agent",
@@ -2746,14 +3594,6 @@
 							"method": "GET",
 							"param": "Header User-Agent",
 							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register",
-							"method": "GET",
-							"param": "Header User-Agent",
-							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
 							"evidence": "",
 							"otherinfo": ""
 						},
@@ -2950,13 +3790,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "104",
+					"count": "232",
 					"solution": "",
 					"otherinfo": "",
 					"reference": "<p>https://owasp.org/wstg</p>",
 					"cweid": "0",
 					"wascid": "0",
-					"sourceid": "3680"
+					"sourceid": "3654"
 				}
 			]
 		}

@@ -20,36 +20,36 @@ ZAP by [Checkmarx](https://checkmarx.com/).
 | Name | Risk Level | Number of Instances |
 | --- | --- | --- |
 | CSP: Wildcard Directive | Medium | 2 |
-| Content Security Policy (CSP) Header Not Set | Medium | 11 |
-| Missing Anti-clickjacking Header | Medium | 11 |
-| Secure Pages Include Mixed Content (Including Scripts) | Medium | 11 |
+| Content Security Policy (CSP) Header Not Set | Medium | 5 |
+| Missing Anti-clickjacking Header | Medium | 5 |
+| Secure Pages Include Mixed Content (Including Scripts) | Medium | 5 |
 | Source Code Disclosure - SQL | Medium | 1 |
-| Sub Resource Integrity Attribute Missing | Medium | 8 |
+| Sub Resource Integrity Attribute Missing | Medium | 12 |
 | Vulnerable JS Library | Medium | 1 |
 | Web Cache Deception | Medium | 2 |
 | Cookie Without Secure Flag | Low | 2 |
 | Cookie without SameSite Attribute | Low | 2 |
 | Cross-Domain JavaScript Source File Inclusion | Low | 9 |
 | HTTPS Content Available via HTTP | Low | 6 |
-| Permissions Policy Header Not Set | Low | 11 |
+| Permissions Policy Header Not Set | Low | 9 |
 | Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s) | Low | 10 |
-| Strict-Transport-Security Header Not Set | Low | 11 |
+| Strict-Transport-Security Header Not Set | Low | 10 |
 | Timestamp Disclosure - Unix | Low | 12 |
-| X-Content-Type-Options Header Missing | Low | 11 |
+| X-Content-Type-Options Header Missing | Low | 8 |
 | Authentication Request Identified | Informational | 1 |
-| Base64 Disclosure | Informational | 10 |
-| Cookie Slack Detector | Informational | 18 |
+| Base64 Disclosure | Informational | 4 |
+| Cookie Slack Detector | Informational | 28 |
 | Information Disclosure - Suspicious Comments | Informational | 3 |
 | Non-Storable Content | Informational | 4 |
-| Re-examine Cache-control Directives | Informational | 11 |
+| Re-examine Cache-control Directives | Informational | 5 |
 | Sec-Fetch-Dest Header is Missing | Informational | 3 |
 | Sec-Fetch-Mode Header is Missing | Informational | 3 |
 | Sec-Fetch-Site Header is Missing | Informational | 3 |
 | Sec-Fetch-User Header is Missing | Informational | 3 |
-| Session Management Response Identified | Informational | 4 |
+| Session Management Response Identified | Informational | 3 |
 | Storable and Cacheable Content | Informational | 5 |
 | Storable but Non-Cacheable Content | Informational | 1 |
-| User Agent Fuzzer | Informational | 104 |
+| User Agent Fuzzer | Informational | 232 |
 
 
 
@@ -138,42 +138,6 @@ Content Security Policy (CSP) is an added layer of security that helps to detect
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
   * Method: `GET`
   * Parameter: ``
@@ -187,7 +151,7 @@ Content Security Policy (CSP) is an added layer of security that helps to detect
   * Evidence: ``
   * Other Info: ``
 
-Instances: 11
+Instances: 5
 
 ### Solution
 
@@ -240,42 +204,6 @@ The response does not protect against 'ClickJacking' attacks. It should include 
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
-  * Method: `GET`
-  * Parameter: `x-frame-options`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
-  * Method: `GET`
-  * Parameter: `x-frame-options`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
-  * Method: `GET`
-  * Parameter: `x-frame-options`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
-  * Method: `GET`
-  * Parameter: `x-frame-options`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
-  * Method: `GET`
-  * Parameter: `x-frame-options`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
-  * Method: `GET`
-  * Parameter: `x-frame-options`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
   * Method: `GET`
   * Parameter: `x-frame-options`
@@ -289,7 +217,7 @@ The response does not protect against 'ClickJacking' attacks. It should include 
   * Evidence: ``
   * Other Info: ``
 
-Instances: 11
+Instances: 5
 
 ### Solution
 
@@ -340,48 +268,6 @@ The page includes mixed content, that is content accessed via HTTP instead of HT
   * Evidence: `http://html5shim.googlecode.com/svn/trunk/html5.js`
   * Other Info: `tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js
 `
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: `http://html5shim.googlecode.com/svn/trunk/html5.js`
-  * Other Info: `tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js
-`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: `http://html5shim.googlecode.com/svn/trunk/html5.js`
-  * Other Info: `tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js
-`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: `http://html5shim.googlecode.com/svn/trunk/html5.js`
-  * Other Info: `tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js
-`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: `http://html5shim.googlecode.com/svn/trunk/html5.js`
-  * Other Info: `tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js
-`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: `http://html5shim.googlecode.com/svn/trunk/html5.js`
-  * Other Info: `tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js
-`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: `http://html5shim.googlecode.com/svn/trunk/html5.js`
-  * Other Info: `tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js
-`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
   * Method: `GET`
   * Parameter: ``
@@ -397,7 +283,7 @@ The page includes mixed content, that is content accessed via HTTP instead of HT
   * Other Info: `tag=script src=http://html5shim.googlecode.com/svn/trunk/html5.js
 `
 
-Instances: 11
+Instances: 5
 
 ### Solution
 
@@ -516,8 +402,34 @@ The integrity attribute is missing on a script or link tag served by an external
   * Attack: ``
   * Evidence: `<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>`
   * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: `<link id="bootstrap_styles" rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"/>`
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: `<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>`
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: `<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js"></script>`
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: `<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>`
+  * Other Info: ``
 
-Instances: 8
+Instances: 12
 
 ### Solution
 
@@ -894,18 +806,6 @@ Permissions Policy Header is an added layer of security that helps to restrict f
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
   * Method: `GET`
   * Parameter: ``
@@ -931,7 +831,7 @@ Permissions Policy Header is an added layer of security that helps to restrict f
   * Evidence: ``
   * Other Info: ``
 
-Instances: 11
+Instances: 9
 
 ### Solution
 
@@ -1091,12 +991,6 @@ HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
   * Method: `GET`
   * Parameter: ``
@@ -1122,7 +1016,7 @@ HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby
   * Evidence: ``
   * Other Info: ``
 
-Instances: 11
+Instances: 10
 
 ### Solution
 
@@ -1159,74 +1053,74 @@ A timestamp was disclosed by the application/web server. - Unix
   * Method: `GET`
   * Parameter: `Reporting-Endpoints`
   * Attack: ``
-  * Evidence: `1729798810`
-  * Other Info: `1729798810, which evaluates to: 2024-10-24 19:40:10.`
+  * Evidence: `1729814944`
+  * Other Info: `1729814944, which evaluates to: 2024-10-25 00:09:04.`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/
   * Method: `GET`
   * Parameter: `Reporting-Endpoints`
   * Attack: ``
-  * Evidence: `1729798803`
-  * Other Info: `1729798803, which evaluates to: 2024-10-24 19:40:03.`
+  * Evidence: `1729814941`
+  * Other Info: `1729814941, which evaluates to: 2024-10-25 00:09:01.`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/
   * Method: `GET`
   * Parameter: `Reporting-Endpoints`
   * Attack: ``
-  * Evidence: `1729798810`
-  * Other Info: `1729798810, which evaluates to: 2024-10-24 19:40:10.`
+  * Evidence: `1729814944`
+  * Other Info: `1729814944, which evaluates to: 2024-10-25 00:09:04.`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/fa/css/font-awesome.min.css
   * Method: `GET`
   * Parameter: `Reporting-Endpoints`
   * Attack: ``
-  * Evidence: `1729798810`
-  * Other Info: `1729798810, which evaluates to: 2024-10-24 19:40:10.`
+  * Evidence: `1729814944`
+  * Other Info: `1729814944, which evaluates to: 2024-10-25 00:09:04.`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/showdown.min.js
   * Method: `GET`
   * Parameter: `Reporting-Endpoints`
   * Attack: ``
-  * Evidence: `1729798810`
-  * Other Info: `1729798810, which evaluates to: 2024-10-24 19:40:10.`
+  * Evidence: `1729814944`
+  * Other Info: `1729814944, which evaluates to: 2024-10-25 00:09:04.`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw
   * Method: `GET`
   * Parameter: `Reporting-Endpoints`
   * Attack: ``
-  * Evidence: `1729798810`
-  * Other Info: `1729798810, which evaluates to: 2024-10-24 19:40:10.`
+  * Evidence: `1729814944`
+  * Other Info: `1729814944, which evaluates to: 2024-10-25 00:09:04.`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
   * Method: `GET`
   * Parameter: `Reporting-Endpoints`
   * Attack: ``
-  * Evidence: `1729798808`
-  * Other Info: `1729798808, which evaluates to: 2024-10-24 19:40:08.`
+  * Evidence: `1729814941`
+  * Other Info: `1729814941, which evaluates to: 2024-10-25 00:09:01.`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
   * Method: `GET`
   * Parameter: `Reporting-Endpoints`
   * Attack: ``
-  * Evidence: `1729798810`
-  * Other Info: `1729798810, which evaluates to: 2024-10-24 19:40:10.`
+  * Evidence: `1729814944`
+  * Other Info: `1729814944, which evaluates to: 2024-10-25 00:09:04.`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register
   * Method: `GET`
   * Parameter: `Reporting-Endpoints`
   * Attack: ``
-  * Evidence: `1729798810`
-  * Other Info: `1729798810, which evaluates to: 2024-10-24 19:40:10.`
+  * Evidence: `1729814944`
+  * Other Info: `1729814944, which evaluates to: 2024-10-25 00:09:04.`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/robots.txt
   * Method: `GET`
   * Parameter: `Reporting-Endpoints`
   * Attack: ``
-  * Evidence: `1729798810`
-  * Other Info: `1729798810, which evaluates to: 2024-10-24 19:40:10.`
+  * Evidence: `1729814944`
+  * Other Info: `1729814944, which evaluates to: 2024-10-25 00:09:04.`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/sitemap.xml
   * Method: `GET`
   * Parameter: `Reporting-Endpoints`
   * Attack: ``
-  * Evidence: `1729798810`
-  * Other Info: `1729798810, which evaluates to: 2024-10-24 19:40:10.`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
+  * Evidence: `1729814944`
+  * Other Info: `1729814944, which evaluates to: 2024-10-25 00:09:04.`
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw
   * Method: `POST`
   * Parameter: `Reporting-Endpoints`
   * Attack: ``
-  * Evidence: `1729798810`
-  * Other Info: `1729798810, which evaluates to: 2024-10-24 19:40:10.`
+  * Evidence: `1729814944`
+  * Other Info: `1729814944, which evaluates to: 2024-10-25 00:09:04.`
 
 Instances: 12
 
@@ -1299,27 +1193,6 @@ At "High" threshold this scan rule will not alert on client or server error resp
   * Evidence: ``
   * Other Info: `This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
 At "High" threshold this scan rule will not alert on client or server error responses.`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
-  * Method: `GET`
-  * Parameter: `x-content-type-options`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: `This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At "High" threshold this scan rule will not alert on client or server error responses.`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
-  * Method: `GET`
-  * Parameter: `x-content-type-options`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: `This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At "High" threshold this scan rule will not alert on client or server error responses.`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
-  * Method: `GET`
-  * Parameter: `x-content-type-options`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: `This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At "High" threshold this scan rule will not alert on client or server error responses.`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
   * Method: `GET`
   * Parameter: `x-content-type-options`
@@ -1335,7 +1208,7 @@ At "High" threshold this scan rule will not alert on client or server error resp
   * Other Info: `This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
 At "High" threshold this scan rule will not alert on client or server error responses.`
 
-Instances: 11
+Instances: 8
 
 ### Solution
 
@@ -1405,64 +1278,28 @@ Base64 encoded data was disclosed by the application/web server. Note: in the in
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
-  * Evidence: `3ACVtX1hy30hP-U0sMM6mISVROrqj5crGM`
-  * Other Info: `� ��}a�}!?�4��:���D�ꏗ+`
+  * Evidence: `3AiX4eWLZ9MkaIneH85iyn82MrOeW7K53F`
+  * Other Info: `����g�$h���b�62��[���`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
-  * Evidence: `S27hKN1emvmwZqxAeULleYsxgvXWl4C3O3hZdgj6UWs`
-  * Other Info: `Kn�(�^���f�@yB�y�1��֗��;xYv�Qk`
+  * Evidence: `1IhNwMXCrin0G4XH1zMmTunxA2IefOIJZ1mtDVOtbvo`
+  * Other Info: `ԈM��®)����3&N��b|�	gY�S�n�`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/assets/showdown.min.js
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: `disableForced4SpacesIndentedSublists`
   * Other Info: `v+nW���w��iǬ"w^�םJ���l`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
-  * Evidence: `php/Top_10-2017_A10-Insufficient_Logging`
-  * Other Info: `�N��O��^�]>"{.}������� �)�`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: `php/Top_10_2013-A6-Sensitive_Data_Exposure`
-  * Other Info: `�N��O��]���z{"�+��6�k�1��.�`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: `php/Top_10_2013-A7-Missing_Function_Level_Access_Control`
-  * Other Info: `�N��O��]�����"�źw-���-�ޗ�q�,�*'��%`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: `php/Top_10_2013-A5-Security_Misconfiguration`
-  * Other Info: `�N��O��]���y˫�ܿ2+�w��ڶ*'`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: `php/Top_10-2017_A8-Insecure_Deserialization`
-  * Other Info: `�N��O��^�ψ�ǜ�����&��6���`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: `php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities`
-  * Other Info: `�N��O��]�ߔ�)��*&��ޞ�?�+a����պYޭ��+bz`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect
-  * Method: `GET`
-  * Parameter: ``
-  * Attack: ``
-  * Evidence: `php/Top_10_2013-A10-Unvalidated_Redirects_and_Forwards`
-  * Other Info: `�N��O��]�]>R{ږ'Z��E�b��-���w�h��v`
+  * Evidence: `1IhNwMXCrin0G4XH1zMmTunxA2IefOIJZ1mtDVOtbvo`
+  * Other Info: `ԈM��®)����3&N��b|�	gY�S�n�`
 
-Instances: 10
+Instances: 4
 
 ### Solution
 
@@ -1579,7 +1416,77 @@ These cookies did NOT affect the response: connect.sid
 These cookies affected the response: 
 These cookies did NOT affect the response: connect.sid
 `
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: `Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a2_broken_auth
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: `Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+`
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: `Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+`
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: `Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+`
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: `Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+`
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: `Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+`
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: `Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+`
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: `Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+`
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: `Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+`
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: `Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+`
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -1591,7 +1498,9 @@ These cookies did NOT affect the response: connect.sid
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-  * Other Info: `Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
+  * Other Info: `Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.
+These cookies affected the response: 
+These cookies did NOT affect the response: connect.sid
 `
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/logout
   * Method: `GET`
@@ -1607,9 +1516,7 @@ These cookies did NOT affect the response: connect.sid
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-  * Other Info: `Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.
-These cookies affected the response: 
-These cookies did NOT affect the response: connect.sid
+  * Other Info: `Dropping this cookie appears to have invalidated the session: [connect.sid] A follow-on request with all original cookies still had a different response than the original request.
 `
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/robots.txt
   * Method: `GET`
@@ -1648,7 +1555,7 @@ These cookies affected the response:
 These cookies did NOT affect the response: connect.sid
 `
 
-Instances: 18
+Instances: 28
 
 ### Solution
 
@@ -1808,42 +1715,6 @@ The cache-control header has not been set properly or is missing, allowing the b
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
-  * Method: `GET`
-  * Parameter: `cache-control`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
-  * Method: `GET`
-  * Parameter: `cache-control`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
-  * Method: `GET`
-  * Parameter: `cache-control`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
-  * Method: `GET`
-  * Parameter: `cache-control`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
-  * Method: `GET`
-  * Parameter: `cache-control`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
-  * Method: `GET`
-  * Parameter: `cache-control`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
   * Method: `GET`
   * Parameter: `cache-control`
@@ -1857,7 +1728,7 @@ The cache-control header has not been set properly or is missing, allowing the b
   * Evidence: ``
   * Other Info: ``
 
-Instances: 11
+Instances: 5
 
 ### Solution
 
@@ -2084,32 +1955,25 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `connect.sid`
   * Attack: ``
-  * Evidence: `s%3ACVtX1hy30hP-U0sMM6mISVROrqj5crGM.7LTsDyLe34lmV6%2B9voDUjUQktN03QAtayCa7OfOpqsQ`
+  * Evidence: `s%3AiX4eWLZ9MkaIneH85iyn82MrOeW7K53F.%2F40jcsomKerSFgotvQ358OB%2BD1P5IKIhAswJzk2JDZw`
   * Other Info: `
 cookie:connect.sid`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/
   * Method: `GET`
   * Parameter: `connect.sid`
   * Attack: ``
-  * Evidence: `s%3AzWO8fBmVQaNqSZaCWtMKQmfFHh8FMfgs.QkLSlsqUebwKpA%2BCKpsUnzb9%2Fb6YpJh3F3z3bND%2F2lA`
+  * Evidence: `s%3AbjpAbW-Da6OrfY_Z_G_cZ9nd8Hm1nnLs.DjikkDZJSIGygJaW%2BdtWiTOZwFNOy0VGch%2B%2FxPsXjjw`
   * Other Info: `
 cookie:connect.sid`
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com
   * Method: `GET`
   * Parameter: `connect.sid`
   * Attack: ``
-  * Evidence: `s%3ACVtX1hy30hP-U0sMM6mISVROrqj5crGM.7LTsDyLe34lmV6%2B9voDUjUQktN03QAtayCa7OfOpqsQ`
-  * Other Info: `
-cookie:connect.sid`
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/
-  * Method: `GET`
-  * Parameter: `connect.sid`
-  * Attack: ``
-  * Evidence: `s%3AzWO8fBmVQaNqSZaCWtMKQmfFHh8FMfgs.QkLSlsqUebwKpA%2BCKpsUnzb9%2Fb6YpJh3F3z3bND%2F2lA`
+  * Evidence: `s%3AiX4eWLZ9MkaIneH85iyn82MrOeW7K53F.%2F40jcsomKerSFgotvQ358OB%2BD1P5IKIhAswJzk2JDZw`
   * Other Info: `
 cookie:connect.sid`
 
-Instances: 4
+Instances: 3
 
 ### Solution
 
@@ -2535,25 +2399,85 @@ Check for differences in response based on fuzzed User Agent (eg. mobile sites, 
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw
   * Method: `GET`
   * Parameter: `Header User-Agent`
-  * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
   * Evidence: ``
   * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn
-  * Method: `GET`
-  * Parameter: `Header User-Agent`
-  * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
   * Evidence: ``
   * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a10_logging
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
   * Evidence: ``
   * Other Info: ``
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a2_broken_auth
@@ -2623,6 +2547,654 @@ Check for differences in response based on fuzzed User Agent (eg. mobile sites, 
   * Evidence: ``
   * Other Info: ``
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a2_broken_auth
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a3_sensitive_data
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a4_xxe
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a5_broken_access_control
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a6_sec_misconf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a7_xss
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a8_ides
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/a9_vuln_component
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_csrf
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/learn/vulnerability/ax_redirect
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
@@ -2631,7 +3203,73 @@ Check for differences in response based on fuzzed User Agent (eg. mobile sites, 
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
   * Method: `GET`
   * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
   * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/login
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
   * Evidence: ``
   * Other Info: ``
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/logout
@@ -2710,12 +3348,6 @@ Check for differences in response based on fuzzed User Agent (eg. mobile sites, 
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/register
-  * Method: `GET`
-  * Parameter: `Header User-Agent`
-  * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
   * Evidence: ``
   * Other Info: ``
 * URL: https://log8100-10-dev-2addd04e4cb7.herokuapp.com/forgotpw
@@ -2863,7 +3495,7 @@ Check for differences in response based on fuzzed User Agent (eg. mobile sites, 
   * Evidence: ``
   * Other Info: ``
 
-Instances: 104
+Instances: 232
 
 ### Solution
 
