@@ -51,7 +51,17 @@
             padding: 20px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
+		
+		.mermaid {
+            display: flex;            /* Use flexbox for alignment */
+            justify-content: center;  /* Center horizontally */
+            align-items: center;      /* Center vertically */
+        }
     </style>
+	<script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({startOnLoad: true});
+    </script>
 </head>
 
 <body>
@@ -83,9 +93,31 @@
         <p>Use docker-compose to spin up the application along with the database:</p>
         <pre><code class="lang-bash"><span class="hljs-attribute">docker compose up</span>
         </code></pre>
+        <h4 id="start-the-application-and-database">CI Pipeline Diagram</h4>
+		<br/>
+		<div class="mermaid">
+			stateDiagram
+				[*] --> Attente_Declencheur : Push to 'main' or 'develop'
+				Attente_Declencheur --> Analyse_SonarCloud : Déclenchement sur 'main'
+				Attente_Declencheur --> Analyse_Dependabot : Déclenchement sur 'develop'
+				Analyse_Dependabot --> Analyse_SonarCloud : Mise à jour des dépendances 
+				Analyse_SonarCloud --> Succès_Sonar : SonarCloud (Succès)
+				Analyse_SonarCloud --> Échec_Sonar : SonarCloud (Échec)
+				Succès_Sonar --> Construction_Docker : Build Docker Compose
+				Échec_Sonar --> Fin_Échec : Échec du pipeline
+				Construction_Docker --> Succès_Build : Build (Succès)
+				Construction_Docker --> Échec_Build : Build (Échec)
+				Succès_Build --> Fin_Succès : Succès du pipeline
+				Échec_Build --> Fin_Échec : Échec du pipeline
+				Fin_Succès --> [*]
+				Fin_Échec --> [*]
+		</div>
+		<h4 id="start-the-application-and-database">CD Pipeline Diagram</h4>
+		<br/>
+		<img src="resources/CD pipeline.svg" alt="Mon Image SVG" width="100%" height="auto">
         <h4 id="access-the-application">Access the Application</h4>
         <p>You can now access the application in your browser at:
-            <a href="https://log8100-10-dev-2addd04e4cb7.herokuapp.com">Deplyed App - DEV</a>
+            <a href="https://log8100-10-dev-2addd04e4cb7.herokuapp.com">Deployed App - DEV</a>
         </p>
         <h4 id="Summary">Summary</h4>
         <p>You can find some vulnerability example here below:
@@ -93,7 +125,7 @@
         </p>
         <h4 id="Summary">Zap analysis</h4>
         <p>Here is the results of the analysis with ZAP:
-            <a href="report_html.html">Zap report</a>
+            <a href="resources/app_dev/report_html.html">Zap report</a>
         </p>
         <h4 id="Summary">Report TP2</h4>
         <p>Here is our report for TP2:
